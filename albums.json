@@ -1,0 +1,953 @@
+{
+  "generated": "2026-11-15T23:48:18Z",
+  "counts": {
+    "total": 90,
+    "cd": 32,
+    "vinyl": 3,
+    "digital": 55,
+    "partial": 26
+  },
+  "albums": [
+    {
+      "id": "the-alan-parsons-project-i-robot-cd",
+      "artist": "The Alan Parsons Project",
+      "title": "I Robot",
+      "year": 1977,
+      "format": "cd",
+      "label": "Cooking Vinyl",
+      "discogs": "https://www.discogs.com/release/35435989",
+      "cover": "covers/the-alan-parsons-project-i-robot-cd.jpg"
+    },
+    {
+      "id": "the-alan-parsons-project-eve-vinyl",
+      "artist": "The Alan Parsons Project",
+      "title": "Eve",
+      "year": 1979,
+      "format": "vinyl",
+      "label": "Arista / EMI Electrola",
+      "discogs": "https://www.discogs.com/release/373919",
+      "cover": "covers/the-alan-parsons-project-eve-vinyl.jpg"
+    },
+    {
+      "id": "the-alan-parsons-project-eye-in-the-sky-vinyl-arista",
+      "artist": "The Alan Parsons Project",
+      "title": "Eye In The Sky",
+      "year": 1982,
+      "format": "vinyl",
+      "label": "Arista",
+      "discogs": "https://www.discogs.com/release/13165237",
+      "cover": "covers/the-alan-parsons-project-eye-in-the-sky-vinyl-arista.jpg"
+    },
+    {
+      "id": "the-alan-parsons-project-eye-in-the-sky-vinyl-cooking-vinyl",
+      "artist": "The Alan Parsons Project",
+      "title": "Eye In The Sky",
+      "year": 1982,
+      "format": "vinyl",
+      "variant": "Clear vinyl, 2026 remaster",
+      "label": "Cooking Vinyl / Sony Music Commercial Music Group",
+      "discogs": "https://www.discogs.com/release/36899157",
+      "cover": "covers/the-alan-parsons-project-eye-in-the-sky-vinyl-cooking-vinyl.jpg"
+    },
+    {
+      "id": "axel-thesleff-bad-karma-digital",
+      "artist": "Axel Thesleff",
+      "title": "Bad Karma",
+      "year": 2014,
+      "format": "digital",
+      "tracks": [
+        "Bad Karma"
+      ],
+      "acquired": "2026-08-05",
+      "cover": "covers/axel-thesleff-bad-karma-digital.jpg"
+    },
+    {
+      "id": "benny-benassi-come-fly-away-digital",
+      "artist": "Benny Benassi feat. Channing",
+      "title": "Come Fly Away",
+      "year": 2013,
+      "format": "digital",
+      "tracks": [
+        "Come Fly Away (Soha & Adam K Remix)"
+      ],
+      "label": "Ultra",
+      "cover": "covers/benny-benassi-come-fly-away-digital.jpg"
+    },
+    {
+      "id": "buena-vista-social-club-buena-vista-social-club-cd",
+      "artist": "Buena Vista Social Club",
+      "title": "Buena Vista Social Club",
+      "year": 1997,
+      "format": "cd",
+      "label": "Nonesuch / World Circuit",
+      "discogs": "https://www.discogs.com/release/10922088",
+      "cover": "covers/buena-vista-social-club-buena-vista-social-club-cd.jpg"
+    },
+    {
+      "id": "camel-power-club-sputnik-ii-oboe-digital",
+      "artist": "Camel Power Club",
+      "title": "Sputnik II - Oboe",
+      "year": 2023,
+      "format": "digital",
+      "tracks": [
+        "Sputnik II - Oboe"
+      ],
+      "acquired": "2026-08-05",
+      "cover": "covers/camel-power-club-sputnik-ii-oboe-digital.jpg"
+    },
+    {
+      "id": "cherub-doses-and-mimosas-digital",
+      "artist": "Cherub",
+      "title": "Doses & Mimosas",
+      "year": 2013,
+      "format": "digital",
+      "tracks": [
+        "Doses & Mimosas"
+      ],
+      "label": "Columbia",
+      "cover": "covers/cherub-doses-and-mimosas-digital.jpg"
+    },
+    {
+      "id": "chris-bekker-and-farius-london-sunrise-digital",
+      "artist": "Chris Bekker & Farius",
+      "title": "London Sunrise",
+      "year": 2016,
+      "format": "digital",
+      "tracks": [
+        "London Sunrise (Radio Edit)"
+      ],
+      "label": "VANDIT Records",
+      "cover": "covers/chris-bekker-and-farius-london-sunrise-digital.jpg"
+    },
+    {
+      "id": "the-clash-sandinista-cd",
+      "artist": "The Clash",
+      "title": "Sandinista!",
+      "year": 1980,
+      "format": "cd",
+      "variant": "2 CDs",
+      "label": "Columbia",
+      "discogs": "https://www.discogs.com/release/228931",
+      "cover": "covers/the-clash-sandinista-cd.jpg"
+    },
+    {
+      "id": "collective-soul-collective-soul-cd",
+      "artist": "Collective Soul",
+      "title": "Collective Soul",
+      "year": 1995,
+      "format": "cd",
+      "label": "Atlantic",
+      "discogs": "https://www.discogs.com/release/441884",
+      "cover": "covers/collective-soul-collective-soul-cd.jpg"
+    },
+    {
+      "id": "crash-test-dummies-god-shuffled-his-feet-cd",
+      "artist": "Crash Test Dummies",
+      "title": "God Shuffled His Feet",
+      "year": 1993,
+      "format": "cd",
+      "label": "Arista / BMG",
+      "discogs": "https://www.discogs.com/release/14951044",
+      "cover": "covers/crash-test-dummies-god-shuffled-his-feet-cd.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-1-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 1",
+      "year": 2013,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-1-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-2-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 2",
+      "year": 2013,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-2-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-3-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 3",
+      "year": 2013,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-3-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-4-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 4",
+      "year": 2013,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-4-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-5-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 5",
+      "year": 2013,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-5-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-10-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 10",
+      "year": 2014,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-10-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-11-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 11",
+      "year": 2014,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-11-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-6-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 6",
+      "year": 2014,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-6-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-7-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 7",
+      "year": 2014,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-7-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-8-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 8",
+      "year": 2014,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-8-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-9-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 9",
+      "year": 2014,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-9-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-12-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 12",
+      "year": 2015,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-12-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-13-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 13",
+      "year": 2015,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-13-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-14-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 14",
+      "year": 2015,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-14-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-15-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 15",
+      "year": 2015,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-15-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-16-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 16",
+      "year": 2016,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-16-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-17-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 17",
+      "year": 2016,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-17-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-18-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 18",
+      "year": 2017,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-18-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-19-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 19",
+      "year": 2017,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-19-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-20-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 20",
+      "year": 2017,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-20-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-21-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 21",
+      "year": 2018,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-21-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-22-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 22",
+      "year": 2019,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-22-digital.jpg"
+    },
+    {
+      "id": "crinkles-soundtrack-from-a-box-23-digital",
+      "artist": "Crinkles",
+      "title": "Soundtrack from a Box 23",
+      "year": 2020,
+      "format": "digital",
+      "acquired": "2021-08-16",
+      "cover": "covers/crinkles-soundtrack-from-a-box-23-digital.jpg"
+    },
+    {
+      "id": "deadmau5-album-title-goes-here-digital",
+      "artist": "deadmau5",
+      "title": "> album title goes here <",
+      "year": 2012,
+      "format": "digital",
+      "tracks": [
+        "The Veldt (8 Minute Edit) feat. Chris James"
+      ],
+      "acquired": "2026-07-24",
+      "cover": "covers/deadmau5-album-title-goes-here-digital.jpg"
+    },
+    {
+      "id": "deadmau5-stuff-i-used-to-do-digital",
+      "artist": "deadmau5",
+      "title": "stuff i used to do",
+      "year": 2017,
+      "format": "digital",
+      "tracks": [
+        "Screen door"
+      ],
+      "acquired": "2026-07-24",
+      "cover": "covers/deadmau5-stuff-i-used-to-do-digital.jpg"
+    },
+    {
+      "id": "deadmau5-and-kaskade-i-remember-digital",
+      "artist": "deadmau5 & Kaskade",
+      "title": "I Remember",
+      "year": 2009,
+      "format": "digital",
+      "tracks": [
+        "I Remember (Vocal Mix)"
+      ],
+      "acquired": "2026-07-24",
+      "cover": "covers/deadmau5-and-kaskade-i-remember-digital.jpg"
+    },
+    {
+      "id": "direct-too-far-away-digital",
+      "artist": "Direct",
+      "title": "Too far Away",
+      "year": 2017,
+      "format": "digital",
+      "tracks": [
+        "Too far Away"
+      ],
+      "label": "Monstercat",
+      "acquired": "2026-08-05",
+      "cover": "covers/direct-too-far-away-digital.jpg"
+    },
+    {
+      "id": "eidola-the-architect-cd",
+      "artist": "Eidola",
+      "title": "The Architect",
+      "year": 2021,
+      "format": "cd",
+      "label": "Blue Swan Records / Rise Records",
+      "discogs": "https://www.discogs.com/release/20614147",
+      "cover": "covers/eidola-the-architect-cd.jpg"
+    },
+    {
+      "id": "fleet-foxes-fleet-foxes-cd",
+      "artist": "Fleet Foxes",
+      "title": "Fleet Foxes",
+      "year": 2008,
+      "format": "cd",
+      "label": "Sub Pop",
+      "discogs": "https://www.discogs.com/release/1407391",
+      "cover": "covers/fleet-foxes-fleet-foxes-cd.jpg"
+    },
+    {
+      "id": "fleet-foxes-sun-giant-cd",
+      "artist": "Fleet Foxes",
+      "title": "Sun Giant",
+      "year": 2008,
+      "format": "cd",
+      "variant": "EP",
+      "label": "Sub Pop",
+      "discogs": "https://www.discogs.com/release/1352555",
+      "cover": "covers/fleet-foxes-sun-giant-cd.jpg"
+    },
+    {
+      "id": "fleet-foxes-first-collection-2006-2009-cd",
+      "artist": "Fleet Foxes",
+      "title": "First Collection 2006-2009",
+      "year": 2018,
+      "format": "cd",
+      "variant": "4 CDs",
+      "label": "Sub Pop",
+      "discogs": "https://www.discogs.com/release/37547805",
+      "cover": "covers/fleet-foxes-first-collection-2006-2009-cd.jpg"
+    },
+    {
+      "id": "george-winston-autumn-cd",
+      "artist": "George Winston",
+      "title": "Autumn",
+      "year": 1980,
+      "format": "cd",
+      "label": "Valley Entertainment",
+      "discogs": "https://www.discogs.com/release/12334857",
+      "cover": "covers/george-winston-autumn-cd.jpg"
+    },
+    {
+      "id": "george-winston-december-cd",
+      "artist": "George Winston",
+      "title": "December",
+      "year": 1982,
+      "format": "cd",
+      "variant": "20th anniversary edition",
+      "label": "Windham Hill Records / Dancing Cat Records",
+      "discogs": "https://www.discogs.com/release/30800817",
+      "cover": "covers/george-winston-december-cd.jpg"
+    },
+    {
+      "id": "george-winston-summer-cd",
+      "artist": "George Winston",
+      "title": "Summer",
+      "year": 1991,
+      "format": "cd",
+      "label": "Valley Entertainment",
+      "discogs": "https://www.discogs.com/release/12062682",
+      "cover": "covers/george-winston-summer-cd.jpg"
+    },
+    {
+      "id": "grizzly-bear-veckatimest-digital",
+      "artist": "Grizzly Bear",
+      "title": "Veckatimest",
+      "year": 2009,
+      "format": "digital",
+      "tracks": [
+        "Two Weeks"
+      ],
+      "acquired": "2026-08-05",
+      "cover": "covers/grizzly-bear-veckatimest-digital.jpg"
+    },
+    {
+      "id": "grum-deep-state-cd",
+      "artist": "Grum",
+      "title": "Deep State",
+      "year": 2019,
+      "format": "cd",
+      "label": "Anjunabeats",
+      "discogs": "https://www.discogs.com/release/14372734",
+      "cover": "covers/grum-deep-state-cd.jpg"
+    },
+    {
+      "id": "guy-gerber-what-to-do-digital",
+      "artist": "Guy Gerber",
+      "title": "What To Do",
+      "year": 2018,
+      "format": "digital",
+      "tracks": [
+        "What To Do (Original Mix)"
+      ],
+      "variant": "EP",
+      "acquired": "2026-07-23",
+      "cover": "covers/guy-gerber-what-to-do-digital.jpg"
+    },
+    {
+      "id": "hiroshi-suzuki-cat-cd",
+      "artist": "Hiroshi Suzuki",
+      "title": "Cat",
+      "year": 1975,
+      "format": "cd",
+      "label": "Columbia",
+      "discogs": "https://www.discogs.com/release/6394073",
+      "cover": "covers/hiroshi-suzuki-cat-cd.jpg"
+    },
+    {
+      "id": "home-falling-into-place-digital",
+      "artist": "HOME",
+      "title": "Falling Into Place",
+      "year": 2016,
+      "format": "digital",
+      "acquired": "2026-07-24",
+      "cover": "covers/home-falling-into-place-digital.jpg"
+    },
+    {
+      "id": "imogen-heap-speak-for-yourself-cd",
+      "artist": "Imogen Heap",
+      "title": "Speak For Yourself",
+      "year": 2005,
+      "format": "cd",
+      "variant": "20th anniversary edition",
+      "label": "Megaphonic Records",
+      "discogs": "https://www.discogs.com/release/36050815",
+      "cover": "covers/imogen-heap-speak-for-yourself-cd.jpg"
+    },
+    {
+      "id": "incubus-light-grenades-cd",
+      "artist": "Incubus",
+      "title": "Light Grenades",
+      "year": 2006,
+      "format": "cd",
+      "label": "Epic / Immortal Records",
+      "discogs": "https://www.discogs.com/release/1335553",
+      "cover": "covers/incubus-light-grenades-cd.jpg"
+    },
+    {
+      "id": "jakatta-visions-digital",
+      "artist": "Jakatta",
+      "title": "Visions",
+      "year": 2002,
+      "format": "digital",
+      "label": "Z Records",
+      "acquired": "2026-07-24",
+      "cover": "covers/jakatta-visions-digital.jpg"
+    },
+    {
+      "id": "juanes-un-dia-normal-cd",
+      "artist": "Juanes",
+      "title": "Un Día Normal",
+      "year": 2002,
+      "format": "cd",
+      "label": "Surco Records J.V.",
+      "discogs": "https://www.discogs.com/release/3458729",
+      "cover": "covers/juanes-un-dia-normal-cd.jpg"
+    },
+    {
+      "id": "juanes-la-vida-es-un-ratico-cd",
+      "artist": "Juanes",
+      "title": "La Vida… Es Un Ratico",
+      "year": 2007,
+      "format": "cd",
+      "variant": "Deluxe, with DVD",
+      "label": "Universal Music Latino",
+      "discogs": "https://www.discogs.com/release/14406041",
+      "cover": "covers/juanes-la-vida-es-un-ratico-cd.jpg"
+    },
+    {
+      "id": "juanes-parce-cd",
+      "artist": "Juanes",
+      "title": "P.A.R.C.E.",
+      "year": 2010,
+      "format": "cd",
+      "label": "Universal Music Latino",
+      "discogs": "https://www.discogs.com/release/3823398",
+      "cover": "covers/juanes-parce-cd.jpg"
+    },
+    {
+      "id": "kaskade-4am-digital",
+      "artist": "Kaskade",
+      "title": "4AM",
+      "year": 2010,
+      "format": "digital",
+      "tracks": [
+        "4AM (Adam K & Soha Mix)"
+      ],
+      "label": "Ultra Music",
+      "acquired": "2026-07-23",
+      "cover": "covers/kaskade-4am-digital.jpg"
+    },
+    {
+      "id": "kid-cudi-man-on-the-moon-ii-cd",
+      "artist": "Kid Cudi",
+      "title": "Man On The Moon II: The Legend Of Mr. Rager",
+      "year": 2010,
+      "format": "cd",
+      "label": "Universal Motown",
+      "discogs": "https://www.discogs.com/release/2617698",
+      "cover": "covers/kid-cudi-man-on-the-moon-ii-cd.jpg"
+    },
+    {
+      "id": "the-knocks-and-st-lucia-modern-hearts-digital",
+      "artist": "The Knocks & St. Lucia",
+      "title": "Modern Hearts",
+      "year": 2013,
+      "format": "digital",
+      "tracks": [
+        "Modern Hearts"
+      ],
+      "label": "Interscope Records",
+      "cover": "covers/the-knocks-and-st-lucia-modern-hearts-digital.jpg"
+    },
+    {
+      "id": "late-night-alumni-uncharted-digital",
+      "artist": "Late Night Alumni",
+      "title": "Uncharted",
+      "year": 2009,
+      "format": "digital",
+      "tracks": [
+        "Uncharted"
+      ],
+      "label": "Ultra",
+      "cover": "covers/late-night-alumni-uncharted-digital.jpg"
+    },
+    {
+      "id": "lauryn-hill-the-miseducation-of-lauryn-hill-cd",
+      "artist": "Lauryn Hill",
+      "title": "The Miseducation Of Lauryn Hill",
+      "year": 1998,
+      "format": "cd",
+      "label": "Ruffhouse Records",
+      "discogs": "https://www.discogs.com/release/3871638",
+      "cover": "covers/lauryn-hill-the-miseducation-of-lauryn-hill-cd.jpg"
+    },
+    {
+      "id": "le-youth-about-us-digital",
+      "artist": "Le Youth feat. Emme",
+      "title": "About Us",
+      "year": 2020,
+      "format": "digital",
+      "tracks": [
+        "About Us (feat. EMME)"
+      ],
+      "label": "Spinnin Deep",
+      "cover": "covers/le-youth-about-us-digital.jpg"
+    },
+    {
+      "id": "marina-and-the-diamonds-the-family-jewels-cd",
+      "artist": "Marina & The Diamonds",
+      "title": "The Family Jewels",
+      "year": 2010,
+      "format": "cd",
+      "label": "Chop Shop Records / Atlantic",
+      "discogs": "https://www.discogs.com/release/2301439",
+      "cover": "covers/marina-and-the-diamonds-the-family-jewels-cd.jpg"
+    },
+    {
+      "id": "matthew-dear-modafinil-blues-digital",
+      "artist": "Matthew Dear",
+      "title": "Modafinil Blues",
+      "year": 2017,
+      "format": "digital",
+      "variant": "Single",
+      "acquired": "2026-08-05",
+      "cover": "covers/matthew-dear-modafinil-blues-digital.jpg"
+    },
+    {
+      "id": "mogwai-black-bird-digital",
+      "artist": "Mogwai",
+      "title": "Black Bird",
+      "year": 2022,
+      "format": "digital",
+      "variant": "Soundtrack",
+      "acquired": "2026-05-19",
+      "cover": "covers/mogwai-black-bird-digital.jpg"
+    },
+    {
+      "id": "morgan-page-the-longest-road-digital",
+      "artist": "Morgan Page",
+      "title": "The Longest Road",
+      "year": 2008,
+      "format": "digital",
+      "tracks": [
+        "The Longest Road feat. Lissie (Deadmau5 Remix)"
+      ],
+      "label": "Nettwerk",
+      "cover": "covers/morgan-page-the-longest-road-digital.jpg"
+    },
+    {
+      "id": "netsky-2-digital",
+      "artist": "Netsky",
+      "title": "2",
+      "year": 2012,
+      "format": "digital",
+      "tracks": [
+        "Give & Take"
+      ],
+      "acquired": "2026-07-23",
+      "cover": "covers/netsky-2-digital.jpg"
+    },
+    {
+      "id": "odesza-summers-gone-digital",
+      "artist": "ODESZA",
+      "title": "Summer's Gone",
+      "year": 2012,
+      "format": "digital",
+      "acquired": "2026-07-23",
+      "cover": "covers/odesza-summers-gone-digital.jpg"
+    },
+    {
+      "id": "paradis-recto-verso-cd",
+      "artist": "Paradis",
+      "title": "Recto Verso",
+      "year": 2016,
+      "format": "cd",
+      "label": "Barclay / Riviera",
+      "discogs": "https://www.discogs.com/release/9082509",
+      "cover": "covers/paradis-recto-verso-cd.jpg"
+    },
+    {
+      "id": "paradis-recto-verso-cd-white",
+      "artist": "Paradis",
+      "title": "Recto Verso",
+      "year": 2016,
+      "format": "cd",
+      "variant": "White 2018 reissue",
+      "label": "Barclay / Riviera / Universal Music France",
+      "discogs": "https://www.discogs.com/release/22054231",
+      "cover": "covers/paradis-recto-verso-cd-white.jpg"
+    },
+    {
+      "id": "peggy-gou-moment-digital",
+      "artist": "Peggy Gou",
+      "title": "Moment",
+      "year": 2019,
+      "format": "digital",
+      "tracks": [
+        "Starry Night"
+      ],
+      "variant": "EP",
+      "acquired": "2026-08-05",
+      "cover": "covers/peggy-gou-moment-digital.jpg"
+    },
+    {
+      "id": "polo-and-pan-caravelle-cd",
+      "artist": "Polo & Pan",
+      "title": "Caravelle",
+      "year": 2017,
+      "format": "cd",
+      "label": "Hamburger Records / Ekler'O'ShocK / Caroline Records",
+      "discogs": "https://www.discogs.com/release/10375811",
+      "cover": "covers/polo-and-pan-caravelle-cd.jpg"
+    },
+    {
+      "id": "reflekt-need-to-feel-loved-digital",
+      "artist": "Reflekt feat. Delline Bass",
+      "title": "Need To Feel Loved",
+      "year": 2004,
+      "format": "digital",
+      "tracks": [
+        "Need To Feel Loved (Adam K & Soha Vocal Mix)"
+      ],
+      "label": "Altra Moda",
+      "cover": "covers/reflekt-need-to-feel-loved-digital.jpg"
+    },
+    {
+      "id": "rufus-du-sol-unforgiven-digital",
+      "artist": "RÜFÜS DU SOL",
+      "title": "Unforgiven",
+      "year": 2014,
+      "format": "digital",
+      "tracks": [
+        "Unforgiven (The Presets Remix)"
+      ],
+      "label": "Sweat It Out",
+      "cover": "covers/rufus-du-sol-unforgiven-digital.jpg"
+    },
+    {
+      "id": "rufus-du-sol-bloom-digital",
+      "artist": "RÜFÜS DU SOL",
+      "title": "Bloom",
+      "year": 2016,
+      "format": "digital",
+      "tracks": [
+        "Until The Sun Needs To Rise"
+      ],
+      "acquired": "2026-07-23",
+      "cover": "covers/rufus-du-sol-bloom-digital.jpg"
+    },
+    {
+      "id": "sea-power-disco-elysium-digital",
+      "artist": "Sea Power",
+      "title": "Disco Elysium",
+      "year": 2020,
+      "format": "digital",
+      "variant": "Soundtrack",
+      "label": "Golden Chariot Records",
+      "acquired": "2026-11-14",
+      "cover": "covers/sea-power-disco-elysium-digital.jpg"
+    },
+    {
+      "id": "snowmine-dialects-cd",
+      "artist": "Snowmine",
+      "title": "Dialects",
+      "year": 2014,
+      "format": "cd",
+      "label": "Mystery Buildings",
+      "discogs": "https://www.discogs.com/release/5548062",
+      "cover": "covers/snowmine-dialects-cd.jpg"
+    },
+    {
+      "id": "solomun-home-digital",
+      "artist": "Solomun",
+      "title": "Home",
+      "year": 2020,
+      "format": "digital",
+      "tracks": [
+        "Home (Club Mix)"
+      ],
+      "label": "NINL",
+      "cover": "covers/solomun-home-digital.jpg"
+    },
+    {
+      "id": "spoon-gimme-fiction-digital",
+      "artist": "Spoon",
+      "title": "Gimme Fiction",
+      "year": 2005,
+      "format": "digital",
+      "tracks": [
+        "I Turn My Camera On"
+      ],
+      "acquired": "2026-08-05",
+      "cover": "covers/spoon-gimme-fiction-digital.jpg"
+    },
+    {
+      "id": "stick-figure-choice-is-yours-digital",
+      "artist": "Stick Figure",
+      "title": "Choice is Yours",
+      "year": 2016,
+      "format": "digital",
+      "tracks": [
+        "Choice is Yours (feat. Slightly Stoopid)"
+      ],
+      "acquired": "2026-08-05",
+      "cover": "covers/stick-figure-choice-is-yours-digital.jpg"
+    },
+    {
+      "id": "sting-brand-new-day-cd",
+      "artist": "Sting",
+      "title": "Brand New Day",
+      "year": 1999,
+      "format": "cd",
+      "label": "A&M Records",
+      "discogs": "https://www.discogs.com/release/686416",
+      "cover": "covers/sting-brand-new-day-cd.jpg"
+    },
+    {
+      "id": "strfkr-starfucker-digital",
+      "artist": "STRFKR",
+      "title": "Starfucker",
+      "year": 2008,
+      "format": "digital",
+      "tracks": [
+        "Rawnald Gregory Erickson The Second"
+      ],
+      "acquired": "2026-08-05",
+      "cover": "covers/strfkr-starfucker-digital.jpg"
+    },
+    {
+      "id": "strfkr-future-past-life-digital",
+      "artist": "STRFKR",
+      "title": "Future Past Life",
+      "year": 2020,
+      "format": "digital",
+      "tracks": [
+        "Dear Stranger"
+      ],
+      "acquired": "2026-08-05",
+      "cover": "covers/strfkr-future-past-life-digital.jpg"
+    },
+    {
+      "id": "theodore-shapiro-severance-season-2-cd",
+      "artist": "Theodore Shapiro",
+      "title": "Severance: Season 2 (Apple TV+ Original Series Soundtrack)",
+      "year": 2026,
+      "format": "cd",
+      "label": "Mutant",
+      "discogs": "https://www.discogs.com/release/36514804",
+      "cover": "covers/theodore-shapiro-severance-season-2-cd.jpg"
+    },
+    {
+      "id": "toad-the-wet-sprocket-ps-a-toad-retrospective-cd",
+      "artist": "Toad The Wet Sprocket",
+      "title": "PS (A Toad Retrospective)",
+      "year": 1999,
+      "format": "cd",
+      "variant": "Compilation",
+      "label": "Columbia",
+      "discogs": "https://www.discogs.com/release/1141032",
+      "cover": "covers/toad-the-wet-sprocket-ps-a-toad-retrospective-cd.jpg"
+    },
+    {
+      "id": "ulrich-schnauss-far-away-trains-passing-by-cd",
+      "artist": "Ulrich Schnauss",
+      "title": "Far Away Trains Passing By",
+      "year": 2001,
+      "format": "cd",
+      "label": "Domino",
+      "discogs": "https://www.discogs.com/release/557096",
+      "cover": "covers/ulrich-schnauss-far-away-trains-passing-by-cd.jpg"
+    },
+    {
+      "id": "ulrich-schnauss-a-strangely-isolated-place-cd",
+      "artist": "Ulrich Schnauss",
+      "title": "A Strangely Isolated Place",
+      "year": 2003,
+      "format": "cd",
+      "label": "Domino / City Centre Offices",
+      "discogs": "https://www.discogs.com/release/11395678",
+      "cover": "covers/ulrich-schnauss-a-strangely-isolated-place-cd.jpg"
+    },
+    {
+      "id": "ulrich-schnauss-goodbye-cd",
+      "artist": "Ulrich Schnauss",
+      "title": "Goodbye",
+      "year": 2007,
+      "format": "cd",
+      "label": "Scripted Realities",
+      "discogs": "https://www.discogs.com/release/15344679",
+      "cover": "covers/ulrich-schnauss-goodbye-cd.jpg"
+    }
+  ]
+}

@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Albums</title>
+<style>
+  :root { color-scheme: dark; --bg: #111; --fg: #eee; --dim: #9a9a9a; --card: #1b1b1b; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--bg); color: var(--fg); font: 15px/1.35 -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+  h1 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: 0.02em; }
+  .counts { color: var(--dim); }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .card { background: var(--card); border-radius: 8px; overflow: hidden; }
+  img, .blank { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; background: #2a2a2a; }
+  .meta { display: grid; gap: 2px; padding: 10px 12px 12px; }
+  .title { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .artist { color: var(--dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .line { color: var(--dim); font-size: 12px; margin-top: 4px; }
+  .badge { display: inline-block; border: 1px solid #444; border-radius: 4px; padding: 0 5px; font-size: 11px; letter-spacing: 0.05em; margin-right: 6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Albums</h1>
+  <div class="counts">90 copies · 32 CD · 3 vinyl · 55 digital</div>
+</header>
+<ul>
+<li class="card">
+  <img src="covers/the-alan-parsons-project-i-robot-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">I Robot</span>
+    <span class="artist">The Alan Parsons Project</span>
+    <span class="line"><span class="badge">CD</span> 1977</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/the-alan-parsons-project-eve-vinyl.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Eve</span>
+    <span class="artist">The Alan Parsons Project</span>
+    <span class="line"><span class="badge">VINYL</span> 1979</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-arista.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Eye In The Sky</span>
+    <span class="artist">The Alan Parsons Project</span>
+    <span class="line"><span class="badge">VINYL</span> 1982</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-cooking-vinyl.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Eye In The Sky</span>
+    <span class="artist">The Alan Parsons Project</span>
+    <span class="line"><span class="badge">VINYL</span> 1982</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/axel-thesleff-bad-karma-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Bad Karma</span>
+    <span class="artist">Axel Thesleff</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2014</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/benny-benassi-come-fly-away-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Come Fly Away</span>
+    <span class="artist">Benny Benassi feat. Channing</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2013</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/buena-vista-social-club-buena-vista-social-club-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Buena Vista Social Club</span>
+    <span class="artist">Buena Vista Social Club</span>
+    <span class="line"><span class="badge">CD</span> 1997</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/camel-power-club-sputnik-ii-oboe-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Sputnik II - Oboe</span>
+    <span class="artist">Camel Power Club</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2023</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/cherub-doses-and-mimosas-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Doses &amp; Mimosas</span>
+    <span class="artist">Cherub</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2013</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/chris-bekker-and-farius-london-sunrise-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">London Sunrise</span>
+    <span class="artist">Chris Bekker &amp; Farius</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2016</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/the-clash-sandinista-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Sandinista!</span>
+    <span class="artist">The Clash</span>
+    <span class="line"><span class="badge">CD</span> 1980</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/collective-soul-collective-soul-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Collective Soul</span>
+    <span class="artist">Collective Soul</span>
+    <span class="line"><span class="badge">CD</span> 1995</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crash-test-dummies-god-shuffled-his-feet-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">God Shuffled His Feet</span>
+    <span class="artist">Crash Test Dummies</span>
+    <span class="line"><span class="badge">CD</span> 1993</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-1-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 1</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2013</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-2-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 2</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2013</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-3-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 3</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2013</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-4-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 4</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2013</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-5-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 5</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2013</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-10-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 10</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2014</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-11-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 11</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2014</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-6-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 6</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2014</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-7-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 7</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2014</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-8-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 8</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2014</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-9-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 9</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2014</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-12-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 12</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2015</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-13-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 13</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2015</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-14-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 14</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2015</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-15-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 15</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2015</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-16-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 16</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2016</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-17-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 17</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2016</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-18-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 18</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2017</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-19-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 19</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2017</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-20-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 20</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2017</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-21-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 21</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2018</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-22-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 22</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2019</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/crinkles-soundtrack-from-a-box-23-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Soundtrack from a Box 23</span>
+    <span class="artist">Crinkles</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2020</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/deadmau5-album-title-goes-here-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">&gt; album title goes here &lt;</span>
+    <span class="artist">deadmau5</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2012</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/deadmau5-stuff-i-used-to-do-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">stuff i used to do</span>
+    <span class="artist">deadmau5</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2017</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/deadmau5-and-kaskade-i-remember-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">I Remember</span>
+    <span class="artist">deadmau5 &amp; Kaskade</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2009</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/direct-too-far-away-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Too far Away</span>
+    <span class="artist">Direct</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2017</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/eidola-the-architect-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">The Architect</span>
+    <span class="artist">Eidola</span>
+    <span class="line"><span class="badge">CD</span> 2021</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/fleet-foxes-fleet-foxes-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Fleet Foxes</span>
+    <span class="artist">Fleet Foxes</span>
+    <span class="line"><span class="badge">CD</span> 2008</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/fleet-foxes-sun-giant-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Sun Giant</span>
+    <span class="artist">Fleet Foxes</span>
+    <span class="line"><span class="badge">CD</span> 2008</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/fleet-foxes-first-collection-2006-2009-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">First Collection 2006-2009</span>
+    <span class="artist">Fleet Foxes</span>
+    <span class="line"><span class="badge">CD</span> 2018</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/george-winston-autumn-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Autumn</span>
+    <span class="artist">George Winston</span>
+    <span class="line"><span class="badge">CD</span> 1980</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/george-winston-december-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">December</span>
+    <span class="artist">George Winston</span>
+    <span class="line"><span class="badge">CD</span> 1982</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/george-winston-summer-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Summer</span>
+    <span class="artist">George Winston</span>
+    <span class="line"><span class="badge">CD</span> 1991</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/grizzly-bear-veckatimest-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Veckatimest</span>
+    <span class="artist">Grizzly Bear</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2009</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/grum-deep-state-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Deep State</span>
+    <span class="artist">Grum</span>
+    <span class="line"><span class="badge">CD</span> 2019</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/guy-gerber-what-to-do-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">What To Do</span>
+    <span class="artist">Guy Gerber</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2018</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/hiroshi-suzuki-cat-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Cat</span>
+    <span class="artist">Hiroshi Suzuki</span>
+    <span class="line"><span class="badge">CD</span> 1975</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/home-falling-into-place-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Falling Into Place</span>
+    <span class="artist">HOME</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2016</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/imogen-heap-speak-for-yourself-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Speak For Yourself</span>
+    <span class="artist">Imogen Heap</span>
+    <span class="line"><span class="badge">CD</span> 2005</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/incubus-light-grenades-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Light Grenades</span>
+    <span class="artist">Incubus</span>
+    <span class="line"><span class="badge">CD</span> 2006</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/jakatta-visions-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Visions</span>
+    <span class="artist">Jakatta</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2002</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/juanes-un-dia-normal-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Un Día Normal</span>
+    <span class="artist">Juanes</span>
+    <span class="line"><span class="badge">CD</span> 2002</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/juanes-la-vida-es-un-ratico-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">La Vida… Es Un Ratico</span>
+    <span class="artist">Juanes</span>
+    <span class="line"><span class="badge">CD</span> 2007</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/juanes-parce-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">P.A.R.C.E.</span>
+    <span class="artist">Juanes</span>
+    <span class="line"><span class="badge">CD</span> 2010</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/kaskade-4am-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">4AM</span>
+    <span class="artist">Kaskade</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2010</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/kid-cudi-man-on-the-moon-ii-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Man On The Moon II: The Legend Of Mr. Rager</span>
+    <span class="artist">Kid Cudi</span>
+    <span class="line"><span class="badge">CD</span> 2010</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/the-knocks-and-st-lucia-modern-hearts-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Modern Hearts</span>
+    <span class="artist">The Knocks &amp; St. Lucia</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2013</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/late-night-alumni-uncharted-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Uncharted</span>
+    <span class="artist">Late Night Alumni</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2009</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/lauryn-hill-the-miseducation-of-lauryn-hill-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">The Miseducation Of Lauryn Hill</span>
+    <span class="artist">Lauryn Hill</span>
+    <span class="line"><span class="badge">CD</span> 1998</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/le-youth-about-us-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">About Us</span>
+    <span class="artist">Le Youth feat. Emme</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2020</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/marina-and-the-diamonds-the-family-jewels-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">The Family Jewels</span>
+    <span class="artist">Marina &amp; The Diamonds</span>
+    <span class="line"><span class="badge">CD</span> 2010</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/matthew-dear-modafinil-blues-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Modafinil Blues</span>
+    <span class="artist">Matthew Dear</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2017</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/mogwai-black-bird-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Black Bird</span>
+    <span class="artist">Mogwai</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2022</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/morgan-page-the-longest-road-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">The Longest Road</span>
+    <span class="artist">Morgan Page</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2008</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/netsky-2-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">2</span>
+    <span class="artist">Netsky</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2012</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/odesza-summers-gone-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Summer&#39;s Gone</span>
+    <span class="artist">ODESZA</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2012</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/paradis-recto-verso-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Recto Verso</span>
+    <span class="artist">Paradis</span>
+    <span class="line"><span class="badge">CD</span> 2016</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/paradis-recto-verso-cd-white.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Recto Verso</span>
+    <span class="artist">Paradis</span>
+    <span class="line"><span class="badge">CD</span> 2016</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/peggy-gou-moment-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Moment</span>
+    <span class="artist">Peggy Gou</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2019</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/polo-and-pan-caravelle-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Caravelle</span>
+    <span class="artist">Polo &amp; Pan</span>
+    <span class="line"><span class="badge">CD</span> 2017</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/reflekt-need-to-feel-loved-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Need To Feel Loved</span>
+    <span class="artist">Reflekt feat. Delline Bass</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2004</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/rufus-du-sol-unforgiven-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Unforgiven</span>
+    <span class="artist">RÜFÜS DU SOL</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2014</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/rufus-du-sol-bloom-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Bloom</span>
+    <span class="artist">RÜFÜS DU SOL</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2016</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/sea-power-disco-elysium-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Disco Elysium</span>
+    <span class="artist">Sea Power</span>
+    <span class="line"><span class="badge">DIGITAL</span> 2020</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/snowmine-dialects-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Dialects</span>
+    <span class="artist">Snowmine</span>
+    <span class="line"><span class="badge">CD</span> 2014</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/solomun-home-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Home</span>
+    <span class="artist">Solomun</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2020</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/spoon-gimme-fiction-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Gimme Fiction</span>
+    <span class="artist">Spoon</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2005</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/stick-figure-choice-is-yours-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Choice is Yours</span>
+    <span class="artist">Stick Figure</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2016</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/sting-brand-new-day-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Brand New Day</span>
+    <span class="artist">Sting</span>
+    <span class="line"><span class="badge">CD</span> 1999</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/strfkr-starfucker-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Starfucker</span>
+    <span class="artist">STRFKR</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2008</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/strfkr-future-past-life-digital.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Future Past Life</span>
+    <span class="artist">STRFKR</span>
+    <span class="line"><span class="badge">DIGITAL · single</span> 2020</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/theodore-shapiro-severance-season-2-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Severance: Season 2 (Apple TV+ Original Series Soundtrack)</span>
+    <span class="artist">Theodore Shapiro</span>
+    <span class="line"><span class="badge">CD</span> 2026</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/toad-the-wet-sprocket-ps-a-toad-retrospective-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">PS (A Toad Retrospective)</span>
+    <span class="artist">Toad The Wet Sprocket</span>
+    <span class="line"><span class="badge">CD</span> 1999</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/ulrich-schnauss-far-away-trains-passing-by-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Far Away Trains Passing By</span>
+    <span class="artist">Ulrich Schnauss</span>
+    <span class="line"><span class="badge">CD</span> 2001</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/ulrich-schnauss-a-strangely-isolated-place-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">A Strangely Isolated Place</span>
+    <span class="artist">Ulrich Schnauss</span>
+    <span class="line"><span class="badge">CD</span> 2003</span>
+  </div>
+</li>
+<li class="card">
+  <img src="covers/ulrich-schnauss-goodbye-cd.jpg" alt="" loading="lazy">
+  <div class="meta">
+    <span class="title">Goodbye</span>
+    <span class="artist">Ulrich Schnauss</span>
+    <span class="line"><span class="badge">CD</span> 2007</span>
+  </div>
+</li>
+
+</ul>
+</body>
+</html>
