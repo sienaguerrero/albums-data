@@ -23,6 +23,41 @@
     background-attachment: fixed;
   }
   .page { max-width: 1240px; margin: 16px auto; padding: 0 16px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .rec {
+    --s: 120px; --rpm: 1.8s; --label: var(--butter);
+    display: block; width: var(--s); height: var(--s); border-radius: 50%; position: relative; flex: none;
+    background: repeating-radial-gradient(circle at center, rgba(255,255,255,.06) 0 1px, transparent 1px 3px), radial-gradient(circle at center, #2a2a2a 0 30%, #141414 31% 100%);
+    box-shadow: inset 0 0 0 1px #000, 0 1px 2px rgba(0,0,0,.4);
+    animation: spin var(--rpm) linear infinite;
+  }
+  .rec::before { content: ""; position: absolute; inset: 32%; border-radius: 50%; background: var(--label) center/cover; box-shadow: inset 0 0 0 1px rgba(0,0,0,.35); }
+  .rec::after { content: ""; position: absolute; inset: 47.5%; border-radius: 50%; background: var(--paper); box-shadow: inset 0 0 1px #000; }
+  .rec .shine { position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0 20deg, rgba(255,255,255,.14) 40deg, transparent 60deg 200deg, rgba(255,255,255,.1) 220deg, transparent 240deg); }
+  .cdisc {
+    --s: 120px; --rpm: 1s; --label: none;
+    display: block; width: var(--s); height: var(--s); border-radius: 50%; position: relative; flex: none;
+    background: conic-gradient(from 200deg, #f4f6fa, #ffd3ef 10%, #cdeeff 24%, #d6ffd8 38%, #fff6c4 50%, #f4f6fa 60%, #e3d6ff 74%, #cdeeff 88%, #f4f6fa);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.25), 0 1px 2px rgba(0,0,0,.3);
+    animation: spin var(--rpm) linear infinite;
+  }
+  .cdisc::before { content: ""; position: absolute; inset: 30%; border-radius: 50%; background: var(--label) center/cover, rgba(255,255,255,.55); box-shadow: inset 0 0 0 1px rgba(0,0,0,.2); }
+  .cdisc::after { content: ""; position: absolute; inset: 42%; border-radius: 50%; background: var(--paper); box-shadow: inset 0 0 0 1px rgba(0,0,0,.3); }
+  .deck { display: flex; gap: 10px; align-items: center; padding: 10px 14px; border-top: 1px solid var(--silver); background: linear-gradient(180deg, var(--silver) 0%, #c3c9d4 100%); cursor: pointer; }
+  .platter { position: relative; width: 150px; height: 150px; flex: none; margin: 4px 28px 4px 4px; }
+  .platter .rec, .platter .cdisc { --s: 150px; position: absolute; inset: 0; }
+  .platter .cdisc { --rpm: 1.5s; }
+  .platter [hidden] { display: none; }
+  .arm { position: absolute; right: -24px; top: -4px; width: 14px; height: 14px; border-radius: 50%; background: #666; box-shadow: 0 0 0 3px #999; }
+  .arm::after { content: ""; position: absolute; left: 5px; top: 6px; width: 4px; height: 100px; background: linear-gradient(180deg, #ddd, #888); transform-origin: top; transform: rotate(24deg); box-shadow: 1px 1px 1px rgba(0,0,0,.4); }
+  .nowtext { font: 12px "Courier New", monospace; color: var(--ink); display: grid; gap: 2px; min-width: 0; }
+  .nowtext b { color: var(--deep); font: bold 11px Tahoma, Verdana, sans-serif; letter-spacing: .1em; }
+  .nowtext .t { font: bold 15px "Trebuchet MS", Verdana, sans-serif; }
+  .nowtext .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 6px var(--lime); animation: blink 1s steps(2) infinite; vertical-align: middle; margin-right: 5px; }
+  @keyframes blink { to { opacity: .2; } }
+  .nowtext .hint { color: var(--silver-lo); font-style: italic; font-family: Verdana, Tahoma, sans-serif; font-size: 11px; }
+  .follower { position: fixed; left: 0; top: 0; z-index: 50; pointer-events: none; --s: 22px; margin: 10px 0 0 12px; opacity: .95; }
+  .follower[hidden] { display: none; }
   .bevel {
     background: var(--paper);
     border: 2px solid; border-color: var(--silver-hi) var(--silver-lo) var(--silver-lo) var(--silver-hi);
@@ -46,8 +81,7 @@
     background: linear-gradient(180deg, var(--sea) 0%, var(--foam) 45%, var(--deep) 50%, var(--cyan) 100%);
     -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke: 1px var(--deep);
   }
-  .logo .spark { -webkit-text-fill-color: var(--cyan); -webkit-text-stroke: 0; font-size: .5em; vertical-align: super; display: inline-block; animation: twinkle 1.6s ease-in-out infinite; }
-  @keyframes twinkle { 0%, 100% { opacity: 1; transform: scale(1) rotate(0); } 50% { opacity: .3; transform: scale(.6) rotate(45deg); } }
+  .logo-rec { --s: 36px; align-self: center; }
   .tagline { margin: 0; font-family: "Trebuchet MS", Verdana, sans-serif; font-style: italic; color: var(--deep); }
   .lcd {
     margin-left: auto; padding: 4px 12px; font-family: "Courier New", monospace; font-weight: bold; font-size: 22px; letter-spacing: 2px;
@@ -83,20 +117,27 @@
   .card { background: var(--paper); border: 2px solid; border-color: var(--silver-hi) var(--silver-lo) var(--silver-lo) var(--silver-hi); outline: 1px solid var(--edge); padding: 6px; }
   .card[hidden] { display: none; }
   .card:hover { outline-color: var(--sea); box-shadow: 0 0 0 3px var(--butter); }
-  .sleeve { position: relative; background: #e6e9ef; border: 1px solid var(--silver-lo); }
-  .sleeve img, .blank { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
-  .sleeve.cd::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.35) 0%, rgba(255,255,255,0) 35%, rgba(255,255,255,0) 65%, rgba(255,255,255,.25) 100%); pointer-events: none; }
-  .sleeve.vinyl img { position: relative; z-index: 1; }
-  .card:has(.sleeve.vinyl) { padding-right: 22px; }
-  .sleeve.vinyl::after { content: ""; position: absolute; top: 7%; right: -14%; width: 86%; height: 86%; border-radius: 50%; background: radial-gradient(circle, #9a9a9a 0 7%, #1a1a1a 8% 60%, #2b2b2b 61% 100%); box-shadow: 1px 0 2px rgba(0,0,0,.4); pointer-events: none; z-index: 0; }
+  .sleeve { position: relative; border: 1px solid var(--silver-lo); }
+  .sleeve img, .blank { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; position: relative; z-index: 1; background: #e6e9ef; }
+  .card[data-format="vinyl"], .card[data-format="cd"] { padding-right: 22px; }
+  .sleeve .rec, .sleeve .cdisc { position: absolute; z-index: 0; animation-play-state: paused; transition: right .45s ease; }
+  .sleeve.fmt-vinyl .rec { --s: 86%; --label: var(--butter); top: 7%; right: -14%; }
+  .sleeve.fmt-cd .cdisc { --s: 76%; top: 12%; right: -12%; }
+  .card:hover .sleeve .rec, .card:hover .sleeve .cdisc { animation-play-state: running; }
+  .card:hover .sleeve.fmt-vinyl .rec { right: -36%; }
+  .card:hover .sleeve.fmt-cd .cdisc { right: -30%; }
   .meta { display: grid; gap: 1px; padding: 7px 2px 2px; }
   .title { font: bold 13px "Trebuchet MS", Verdana, sans-serif; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .artist { color: var(--deep); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; }
   .line { display: flex; align-items: center; gap: 6px; margin-top: 4px; font-size: 11px; color: var(--silver-lo); }
-  .badge { display: inline-block; padding: 1px 5px; font: bold 10px Tahoma, Verdana, sans-serif; text-transform: uppercase; letter-spacing: .05em; color: var(--deep); border: 1px solid var(--edge); }
+  .badge { display: inline-flex; align-items: center; gap: 4px; padding: 1px 5px 1px 3px; font: bold 10px Tahoma, Verdana, sans-serif; text-transform: uppercase; letter-spacing: .05em; color: var(--deep); border: 1px solid var(--edge); }
   .badge.cd { background: linear-gradient(180deg, #ffffff, var(--silver)); }
   .badge.vinyl { background: var(--butter); }
   .badge.digital { background: var(--lime); }
+  .badge::before { content: ""; width: 11px; height: 11px; border-radius: 50%; flex: none; }
+  .badge.vinyl::before { background: radial-gradient(circle, var(--paper) 0 12%, var(--butter) 13% 38%, #141414 39% 100%); box-shadow: inset 0 0 0 1px #000; }
+  .badge.cd::before { background: radial-gradient(circle, var(--paper) 0 18%, rgba(255,255,255,.6) 19% 40%, transparent 41%), conic-gradient(from 200deg, #f4f6fa, #ffd3ef 10%, #cdeeff 24%, #d6ffd8 38%, #fff6c4 50%, #f4f6fa 60%, #e3d6ff 74%, #cdeeff 88%, #f4f6fa); box-shadow: inset 0 0 0 1px rgba(0,0,0,.3); }
+  .badge.digital::before { border: 2px dotted var(--deep); width: 9px; height: 9px; }
   .kind { font-style: italic; color: var(--sea); }
   .year { margin-left: auto; font-family: "Courier New", monospace; color: var(--ink); }
   .variant { font-size: 11px; color: var(--silver-lo); font-style: italic; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -110,7 +151,7 @@
     <div class="titlebar"><span>albums.siena.codes</span><span class="buttons"><span>_</span><span>&#9633;</span><span>&times;</span></span></div>
     <div class="masthead">
       <div class="logo-row">
-        <h1 class="logo">albums<span class="spark">&#10022;</span></h1>
+        <h1 class="logo">albums</h1><div class="rec logo-rec" aria-hidden="true"><span class="shine"></span></div>
         <p class="tagline">every CD, record and download I own, on one shelf</p>
         <div class="lcd">090<small>COPIES</small></div>
       </div>
@@ -122,11 +163,15 @@
       <button type="button" id="clear">Clear</button>
       <span class="hits" id="hits"></span>
     </form>
+    <div class="deck" id="deck" title="Click for another">
+      <div class="platter"><div class="rec" id="deck-rec"><span class="shine"></span></div><div class="cdisc" id="deck-cd" hidden></div><div class="arm"></div></div>
+      <div class="nowtext"><b><span class="dot"></span>NOW SPINNING</b><span class="t" id="deck-title"></span><span id="deck-artist"></span><span id="deck-meta"></span><span class="hint">picks another every three minutes, or click</span></div>
+    </div>
   </div>
   <div class="ticker"><span class="label">New on the shelf</span><div class="scroll"><div class="track"><span class="item"><b>Sea Power</b> &middot; Disco Elysium</span><span class="star">&#10022;</span><span class="item"><b>Spoon</b> &middot; Gimme Fiction</span><span class="star">&#10022;</span><span class="item"><b>Camel Power Club</b> &middot; Sputnik II - Oboe</span><span class="star">&#10022;</span><span class="item"><b>Peggy Gou</b> &middot; Moment</span><span class="star">&#10022;</span><span class="item"><b>Matthew Dear</b> &middot; Modafinil Blues</span><span class="star">&#10022;</span><span class="item"><b>Axel Thesleff</b> &middot; Bad Karma</span><span class="star">&#10022;</span><span class="item"><b>Grizzly Bear</b> &middot; Veckatimest</span><span class="star">&#10022;</span><span class="item"><b>Direct</b> &middot; Too far Away</span><span class="star">&#10022;</span><span class="item"><b>STRFKR</b> &middot; Future Past Life</span><span class="star">&#10022;</span><span class="item"><b>STRFKR</b> &middot; Starfucker</span></div></div></div>
   <ul class="grid">
-  <li class="card" data-format="cd" data-text="the alan parsons project i robot cooking vinyl">
-  <div class="sleeve cd"><img src="covers/the-alan-parsons-project-i-robot-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+  <li class="card" data-format="cd" data-title="I Robot" data-artist="The Alan Parsons Project" data-year="1977" data-cover="covers/the-alan-parsons-project-i-robot-cd.jpg" data-text="the alan parsons project i robot cooking vinyl">
+  <div class="sleeve fmt-cd"><img src="covers/the-alan-parsons-project-i-robot-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="I Robot">I Robot</span>
     <span class="artist" title="The Alan Parsons Project">The Alan Parsons Project</span>
@@ -134,8 +179,8 @@
     
   </div>
 </li>
-<li class="card" data-format="vinyl" data-text="the alan parsons project eve arista / emi electrola">
-  <div class="sleeve vinyl"><img src="covers/the-alan-parsons-project-eve-vinyl.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="vinyl" data-title="Eve" data-artist="The Alan Parsons Project" data-year="1979" data-cover="covers/the-alan-parsons-project-eve-vinyl.jpg" data-text="the alan parsons project eve arista / emi electrola">
+  <div class="sleeve fmt-vinyl"><img src="covers/the-alan-parsons-project-eve-vinyl.jpg" alt="" loading="lazy" width="600" height="600"><span class="rec" aria-hidden="true"><span class="shine"></span></span></div>
   <div class="meta">
     <span class="title" title="Eve">Eve</span>
     <span class="artist" title="The Alan Parsons Project">The Alan Parsons Project</span>
@@ -143,8 +188,8 @@
     
   </div>
 </li>
-<li class="card" data-format="vinyl" data-text="the alan parsons project eye in the sky arista">
-  <div class="sleeve vinyl"><img src="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-arista.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="vinyl" data-title="Eye In The Sky" data-artist="The Alan Parsons Project" data-year="1982" data-cover="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-arista.jpg" data-text="the alan parsons project eye in the sky arista">
+  <div class="sleeve fmt-vinyl"><img src="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-arista.jpg" alt="" loading="lazy" width="600" height="600"><span class="rec" aria-hidden="true"><span class="shine"></span></span></div>
   <div class="meta">
     <span class="title" title="Eye In The Sky">Eye In The Sky</span>
     <span class="artist" title="The Alan Parsons Project">The Alan Parsons Project</span>
@@ -152,8 +197,8 @@
     
   </div>
 </li>
-<li class="card" data-format="vinyl" data-text="the alan parsons project eye in the sky cooking vinyl / sony music commercial music group clear vinyl, 2026 remaster">
-  <div class="sleeve vinyl"><img src="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-cooking-vinyl.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="vinyl" data-title="Eye In The Sky" data-artist="The Alan Parsons Project" data-year="1982" data-cover="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-cooking-vinyl.jpg" data-text="the alan parsons project eye in the sky cooking vinyl / sony music commercial music group clear vinyl, 2026 remaster">
+  <div class="sleeve fmt-vinyl"><img src="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-cooking-vinyl.jpg" alt="" loading="lazy" width="600" height="600"><span class="rec" aria-hidden="true"><span class="shine"></span></span></div>
   <div class="meta">
     <span class="title" title="Eye In The Sky">Eye In The Sky</span>
     <span class="artist" title="The Alan Parsons Project">The Alan Parsons Project</span>
@@ -161,8 +206,8 @@
     <span class="variant">Clear vinyl, 2026 remaster</span>
   </div>
 </li>
-<li class="card" data-format="digital" data-text="axel thesleff bad karma bad karma">
-  <div class="sleeve digital"><img src="covers/axel-thesleff-bad-karma-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Bad Karma" data-artist="Axel Thesleff" data-year="2014" data-cover="covers/axel-thesleff-bad-karma-digital.jpg" data-text="axel thesleff bad karma bad karma">
+  <div class="sleeve fmt-digital"><img src="covers/axel-thesleff-bad-karma-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Bad Karma">Bad Karma</span>
     <span class="artist" title="Axel Thesleff">Axel Thesleff</span>
@@ -170,8 +215,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="benny benassi feat. channing come fly away ultra come fly away (soha &amp; adam k remix)">
-  <div class="sleeve digital"><img src="covers/benny-benassi-come-fly-away-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Come Fly Away" data-artist="Benny Benassi feat. Channing" data-year="2013" data-cover="covers/benny-benassi-come-fly-away-digital.jpg" data-text="benny benassi feat. channing come fly away ultra come fly away (soha &amp; adam k remix)">
+  <div class="sleeve fmt-digital"><img src="covers/benny-benassi-come-fly-away-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Come Fly Away">Come Fly Away</span>
     <span class="artist" title="Benny Benassi feat. Channing">Benny Benassi feat. Channing</span>
@@ -179,8 +224,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="buena vista social club buena vista social club nonesuch / world circuit">
-  <div class="sleeve cd"><img src="covers/buena-vista-social-club-buena-vista-social-club-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Buena Vista Social Club" data-artist="Buena Vista Social Club" data-year="1997" data-cover="covers/buena-vista-social-club-buena-vista-social-club-cd.jpg" data-text="buena vista social club buena vista social club nonesuch / world circuit">
+  <div class="sleeve fmt-cd"><img src="covers/buena-vista-social-club-buena-vista-social-club-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Buena Vista Social Club">Buena Vista Social Club</span>
     <span class="artist" title="Buena Vista Social Club">Buena Vista Social Club</span>
@@ -188,8 +233,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="camel power club sputnik ii - oboe sputnik ii - oboe">
-  <div class="sleeve digital"><img src="covers/camel-power-club-sputnik-ii-oboe-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Sputnik II - Oboe" data-artist="Camel Power Club" data-year="2023" data-cover="covers/camel-power-club-sputnik-ii-oboe-digital.jpg" data-text="camel power club sputnik ii - oboe sputnik ii - oboe">
+  <div class="sleeve fmt-digital"><img src="covers/camel-power-club-sputnik-ii-oboe-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Sputnik II - Oboe">Sputnik II - Oboe</span>
     <span class="artist" title="Camel Power Club">Camel Power Club</span>
@@ -197,8 +242,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="cherub doses &amp; mimosas columbia doses &amp; mimosas">
-  <div class="sleeve digital"><img src="covers/cherub-doses-and-mimosas-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Doses &amp; Mimosas" data-artist="Cherub" data-year="2013" data-cover="covers/cherub-doses-and-mimosas-digital.jpg" data-text="cherub doses &amp; mimosas columbia doses &amp; mimosas">
+  <div class="sleeve fmt-digital"><img src="covers/cherub-doses-and-mimosas-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Doses &amp; Mimosas">Doses &amp; Mimosas</span>
     <span class="artist" title="Cherub">Cherub</span>
@@ -206,8 +251,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="chris bekker &amp; farius london sunrise vandit records london sunrise (radio edit)">
-  <div class="sleeve digital"><img src="covers/chris-bekker-and-farius-london-sunrise-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="London Sunrise" data-artist="Chris Bekker &amp; Farius" data-year="2016" data-cover="covers/chris-bekker-and-farius-london-sunrise-digital.jpg" data-text="chris bekker &amp; farius london sunrise vandit records london sunrise (radio edit)">
+  <div class="sleeve fmt-digital"><img src="covers/chris-bekker-and-farius-london-sunrise-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="London Sunrise">London Sunrise</span>
     <span class="artist" title="Chris Bekker &amp; Farius">Chris Bekker &amp; Farius</span>
@@ -215,8 +260,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="the clash sandinista! columbia 2 cds">
-  <div class="sleeve cd"><img src="covers/the-clash-sandinista-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Sandinista!" data-artist="The Clash" data-year="1980" data-cover="covers/the-clash-sandinista-cd.jpg" data-text="the clash sandinista! columbia 2 cds">
+  <div class="sleeve fmt-cd"><img src="covers/the-clash-sandinista-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Sandinista!">Sandinista!</span>
     <span class="artist" title="The Clash">The Clash</span>
@@ -224,8 +269,8 @@
     <span class="variant">2 CDs</span>
   </div>
 </li>
-<li class="card" data-format="cd" data-text="collective soul collective soul atlantic">
-  <div class="sleeve cd"><img src="covers/collective-soul-collective-soul-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Collective Soul" data-artist="Collective Soul" data-year="1995" data-cover="covers/collective-soul-collective-soul-cd.jpg" data-text="collective soul collective soul atlantic">
+  <div class="sleeve fmt-cd"><img src="covers/collective-soul-collective-soul-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Collective Soul">Collective Soul</span>
     <span class="artist" title="Collective Soul">Collective Soul</span>
@@ -233,8 +278,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="crash test dummies god shuffled his feet arista / bmg">
-  <div class="sleeve cd"><img src="covers/crash-test-dummies-god-shuffled-his-feet-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="God Shuffled His Feet" data-artist="Crash Test Dummies" data-year="1993" data-cover="covers/crash-test-dummies-god-shuffled-his-feet-cd.jpg" data-text="crash test dummies god shuffled his feet arista / bmg">
+  <div class="sleeve fmt-cd"><img src="covers/crash-test-dummies-god-shuffled-his-feet-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="God Shuffled His Feet">God Shuffled His Feet</span>
     <span class="artist" title="Crash Test Dummies">Crash Test Dummies</span>
@@ -242,8 +287,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 1">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-1-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 1" data-artist="Crinkles" data-year="2013" data-cover="covers/crinkles-soundtrack-from-a-box-1-digital.jpg" data-text="crinkles soundtrack from a box 1">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-1-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 1">Soundtrack from a Box 1</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -251,8 +296,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 2">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-2-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 2" data-artist="Crinkles" data-year="2013" data-cover="covers/crinkles-soundtrack-from-a-box-2-digital.jpg" data-text="crinkles soundtrack from a box 2">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-2-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 2">Soundtrack from a Box 2</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -260,8 +305,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 3">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-3-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 3" data-artist="Crinkles" data-year="2013" data-cover="covers/crinkles-soundtrack-from-a-box-3-digital.jpg" data-text="crinkles soundtrack from a box 3">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-3-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 3">Soundtrack from a Box 3</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -269,8 +314,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 4">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-4-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 4" data-artist="Crinkles" data-year="2013" data-cover="covers/crinkles-soundtrack-from-a-box-4-digital.jpg" data-text="crinkles soundtrack from a box 4">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-4-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 4">Soundtrack from a Box 4</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -278,8 +323,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 5">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-5-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 5" data-artist="Crinkles" data-year="2013" data-cover="covers/crinkles-soundtrack-from-a-box-5-digital.jpg" data-text="crinkles soundtrack from a box 5">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-5-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 5">Soundtrack from a Box 5</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -287,8 +332,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 10">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-10-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 10" data-artist="Crinkles" data-year="2014" data-cover="covers/crinkles-soundtrack-from-a-box-10-digital.jpg" data-text="crinkles soundtrack from a box 10">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-10-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 10">Soundtrack from a Box 10</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -296,8 +341,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 11">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-11-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 11" data-artist="Crinkles" data-year="2014" data-cover="covers/crinkles-soundtrack-from-a-box-11-digital.jpg" data-text="crinkles soundtrack from a box 11">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-11-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 11">Soundtrack from a Box 11</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -305,8 +350,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 6">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-6-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 6" data-artist="Crinkles" data-year="2014" data-cover="covers/crinkles-soundtrack-from-a-box-6-digital.jpg" data-text="crinkles soundtrack from a box 6">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-6-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 6">Soundtrack from a Box 6</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -314,8 +359,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 7">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-7-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 7" data-artist="Crinkles" data-year="2014" data-cover="covers/crinkles-soundtrack-from-a-box-7-digital.jpg" data-text="crinkles soundtrack from a box 7">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-7-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 7">Soundtrack from a Box 7</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -323,8 +368,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 8">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-8-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 8" data-artist="Crinkles" data-year="2014" data-cover="covers/crinkles-soundtrack-from-a-box-8-digital.jpg" data-text="crinkles soundtrack from a box 8">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-8-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 8">Soundtrack from a Box 8</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -332,8 +377,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 9">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-9-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 9" data-artist="Crinkles" data-year="2014" data-cover="covers/crinkles-soundtrack-from-a-box-9-digital.jpg" data-text="crinkles soundtrack from a box 9">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-9-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 9">Soundtrack from a Box 9</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -341,8 +386,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 12">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-12-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 12" data-artist="Crinkles" data-year="2015" data-cover="covers/crinkles-soundtrack-from-a-box-12-digital.jpg" data-text="crinkles soundtrack from a box 12">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-12-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 12">Soundtrack from a Box 12</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -350,8 +395,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 13">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-13-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 13" data-artist="Crinkles" data-year="2015" data-cover="covers/crinkles-soundtrack-from-a-box-13-digital.jpg" data-text="crinkles soundtrack from a box 13">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-13-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 13">Soundtrack from a Box 13</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -359,8 +404,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 14">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-14-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 14" data-artist="Crinkles" data-year="2015" data-cover="covers/crinkles-soundtrack-from-a-box-14-digital.jpg" data-text="crinkles soundtrack from a box 14">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-14-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 14">Soundtrack from a Box 14</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -368,8 +413,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 15">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-15-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 15" data-artist="Crinkles" data-year="2015" data-cover="covers/crinkles-soundtrack-from-a-box-15-digital.jpg" data-text="crinkles soundtrack from a box 15">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-15-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 15">Soundtrack from a Box 15</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -377,8 +422,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 16">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-16-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 16" data-artist="Crinkles" data-year="2016" data-cover="covers/crinkles-soundtrack-from-a-box-16-digital.jpg" data-text="crinkles soundtrack from a box 16">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-16-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 16">Soundtrack from a Box 16</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -386,8 +431,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 17">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-17-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 17" data-artist="Crinkles" data-year="2016" data-cover="covers/crinkles-soundtrack-from-a-box-17-digital.jpg" data-text="crinkles soundtrack from a box 17">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-17-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 17">Soundtrack from a Box 17</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -395,8 +440,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 18">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-18-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 18" data-artist="Crinkles" data-year="2017" data-cover="covers/crinkles-soundtrack-from-a-box-18-digital.jpg" data-text="crinkles soundtrack from a box 18">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-18-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 18">Soundtrack from a Box 18</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -404,8 +449,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 19">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-19-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 19" data-artist="Crinkles" data-year="2017" data-cover="covers/crinkles-soundtrack-from-a-box-19-digital.jpg" data-text="crinkles soundtrack from a box 19">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-19-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 19">Soundtrack from a Box 19</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -413,8 +458,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 20">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-20-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 20" data-artist="Crinkles" data-year="2017" data-cover="covers/crinkles-soundtrack-from-a-box-20-digital.jpg" data-text="crinkles soundtrack from a box 20">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-20-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 20">Soundtrack from a Box 20</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -422,8 +467,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 21">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-21-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 21" data-artist="Crinkles" data-year="2018" data-cover="covers/crinkles-soundtrack-from-a-box-21-digital.jpg" data-text="crinkles soundtrack from a box 21">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-21-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 21">Soundtrack from a Box 21</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -431,8 +476,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 22">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-22-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 22" data-artist="Crinkles" data-year="2019" data-cover="covers/crinkles-soundtrack-from-a-box-22-digital.jpg" data-text="crinkles soundtrack from a box 22">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-22-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 22">Soundtrack from a Box 22</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -440,8 +485,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="crinkles soundtrack from a box 23">
-  <div class="sleeve digital"><img src="covers/crinkles-soundtrack-from-a-box-23-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Soundtrack from a Box 23" data-artist="Crinkles" data-year="2020" data-cover="covers/crinkles-soundtrack-from-a-box-23-digital.jpg" data-text="crinkles soundtrack from a box 23">
+  <div class="sleeve fmt-digital"><img src="covers/crinkles-soundtrack-from-a-box-23-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Soundtrack from a Box 23">Soundtrack from a Box 23</span>
     <span class="artist" title="Crinkles">Crinkles</span>
@@ -449,8 +494,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="deadmau5 &gt; album title goes here &lt; the veldt (8 minute edit) feat. chris james">
-  <div class="sleeve digital"><img src="covers/deadmau5-album-title-goes-here-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="&gt; album title goes here &lt;" data-artist="deadmau5" data-year="2012" data-cover="covers/deadmau5-album-title-goes-here-digital.jpg" data-text="deadmau5 &gt; album title goes here &lt; the veldt (8 minute edit) feat. chris james">
+  <div class="sleeve fmt-digital"><img src="covers/deadmau5-album-title-goes-here-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="&gt; album title goes here &lt;">&gt; album title goes here &lt;</span>
     <span class="artist" title="deadmau5">deadmau5</span>
@@ -458,8 +503,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="deadmau5 stuff i used to do screen door">
-  <div class="sleeve digital"><img src="covers/deadmau5-stuff-i-used-to-do-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="stuff i used to do" data-artist="deadmau5" data-year="2017" data-cover="covers/deadmau5-stuff-i-used-to-do-digital.jpg" data-text="deadmau5 stuff i used to do screen door">
+  <div class="sleeve fmt-digital"><img src="covers/deadmau5-stuff-i-used-to-do-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="stuff i used to do">stuff i used to do</span>
     <span class="artist" title="deadmau5">deadmau5</span>
@@ -467,8 +512,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="deadmau5 &amp; kaskade i remember i remember (vocal mix)">
-  <div class="sleeve digital"><img src="covers/deadmau5-and-kaskade-i-remember-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="I Remember" data-artist="deadmau5 &amp; Kaskade" data-year="2009" data-cover="covers/deadmau5-and-kaskade-i-remember-digital.jpg" data-text="deadmau5 &amp; kaskade i remember i remember (vocal mix)">
+  <div class="sleeve fmt-digital"><img src="covers/deadmau5-and-kaskade-i-remember-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="I Remember">I Remember</span>
     <span class="artist" title="deadmau5 &amp; Kaskade">deadmau5 &amp; Kaskade</span>
@@ -476,8 +521,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="direct too far away monstercat too far away">
-  <div class="sleeve digital"><img src="covers/direct-too-far-away-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Too far Away" data-artist="Direct" data-year="2017" data-cover="covers/direct-too-far-away-digital.jpg" data-text="direct too far away monstercat too far away">
+  <div class="sleeve fmt-digital"><img src="covers/direct-too-far-away-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Too far Away">Too far Away</span>
     <span class="artist" title="Direct">Direct</span>
@@ -485,8 +530,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="eidola the architect blue swan records / rise records">
-  <div class="sleeve cd"><img src="covers/eidola-the-architect-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="The Architect" data-artist="Eidola" data-year="2021" data-cover="covers/eidola-the-architect-cd.jpg" data-text="eidola the architect blue swan records / rise records">
+  <div class="sleeve fmt-cd"><img src="covers/eidola-the-architect-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="The Architect">The Architect</span>
     <span class="artist" title="Eidola">Eidola</span>
@@ -494,8 +539,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="fleet foxes fleet foxes sub pop">
-  <div class="sleeve cd"><img src="covers/fleet-foxes-fleet-foxes-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Fleet Foxes" data-artist="Fleet Foxes" data-year="2008" data-cover="covers/fleet-foxes-fleet-foxes-cd.jpg" data-text="fleet foxes fleet foxes sub pop">
+  <div class="sleeve fmt-cd"><img src="covers/fleet-foxes-fleet-foxes-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Fleet Foxes">Fleet Foxes</span>
     <span class="artist" title="Fleet Foxes">Fleet Foxes</span>
@@ -503,8 +548,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="fleet foxes sun giant sub pop ep">
-  <div class="sleeve cd"><img src="covers/fleet-foxes-sun-giant-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Sun Giant" data-artist="Fleet Foxes" data-year="2008" data-cover="covers/fleet-foxes-sun-giant-cd.jpg" data-text="fleet foxes sun giant sub pop ep">
+  <div class="sleeve fmt-cd"><img src="covers/fleet-foxes-sun-giant-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Sun Giant">Sun Giant</span>
     <span class="artist" title="Fleet Foxes">Fleet Foxes</span>
@@ -512,8 +557,8 @@
     <span class="variant">EP</span>
   </div>
 </li>
-<li class="card" data-format="cd" data-text="fleet foxes first collection 2006-2009 sub pop 4 cds">
-  <div class="sleeve cd"><img src="covers/fleet-foxes-first-collection-2006-2009-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="First Collection 2006-2009" data-artist="Fleet Foxes" data-year="2018" data-cover="covers/fleet-foxes-first-collection-2006-2009-cd.jpg" data-text="fleet foxes first collection 2006-2009 sub pop 4 cds">
+  <div class="sleeve fmt-cd"><img src="covers/fleet-foxes-first-collection-2006-2009-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="First Collection 2006-2009">First Collection 2006-2009</span>
     <span class="artist" title="Fleet Foxes">Fleet Foxes</span>
@@ -521,8 +566,8 @@
     <span class="variant">4 CDs</span>
   </div>
 </li>
-<li class="card" data-format="cd" data-text="george winston autumn valley entertainment">
-  <div class="sleeve cd"><img src="covers/george-winston-autumn-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Autumn" data-artist="George Winston" data-year="1980" data-cover="covers/george-winston-autumn-cd.jpg" data-text="george winston autumn valley entertainment">
+  <div class="sleeve fmt-cd"><img src="covers/george-winston-autumn-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Autumn">Autumn</span>
     <span class="artist" title="George Winston">George Winston</span>
@@ -530,8 +575,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="george winston december windham hill records / dancing cat records 20th anniversary edition">
-  <div class="sleeve cd"><img src="covers/george-winston-december-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="December" data-artist="George Winston" data-year="1982" data-cover="covers/george-winston-december-cd.jpg" data-text="george winston december windham hill records / dancing cat records 20th anniversary edition">
+  <div class="sleeve fmt-cd"><img src="covers/george-winston-december-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="December">December</span>
     <span class="artist" title="George Winston">George Winston</span>
@@ -539,8 +584,8 @@
     <span class="variant">20th anniversary edition</span>
   </div>
 </li>
-<li class="card" data-format="cd" data-text="george winston summer valley entertainment">
-  <div class="sleeve cd"><img src="covers/george-winston-summer-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Summer" data-artist="George Winston" data-year="1991" data-cover="covers/george-winston-summer-cd.jpg" data-text="george winston summer valley entertainment">
+  <div class="sleeve fmt-cd"><img src="covers/george-winston-summer-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Summer">Summer</span>
     <span class="artist" title="George Winston">George Winston</span>
@@ -548,8 +593,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="grizzly bear veckatimest two weeks">
-  <div class="sleeve digital"><img src="covers/grizzly-bear-veckatimest-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Veckatimest" data-artist="Grizzly Bear" data-year="2009" data-cover="covers/grizzly-bear-veckatimest-digital.jpg" data-text="grizzly bear veckatimest two weeks">
+  <div class="sleeve fmt-digital"><img src="covers/grizzly-bear-veckatimest-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Veckatimest">Veckatimest</span>
     <span class="artist" title="Grizzly Bear">Grizzly Bear</span>
@@ -557,8 +602,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="grum deep state anjunabeats">
-  <div class="sleeve cd"><img src="covers/grum-deep-state-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Deep State" data-artist="Grum" data-year="2019" data-cover="covers/grum-deep-state-cd.jpg" data-text="grum deep state anjunabeats">
+  <div class="sleeve fmt-cd"><img src="covers/grum-deep-state-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Deep State">Deep State</span>
     <span class="artist" title="Grum">Grum</span>
@@ -566,8 +611,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="guy gerber what to do ep what to do (original mix)">
-  <div class="sleeve digital"><img src="covers/guy-gerber-what-to-do-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="What To Do" data-artist="Guy Gerber" data-year="2018" data-cover="covers/guy-gerber-what-to-do-digital.jpg" data-text="guy gerber what to do ep what to do (original mix)">
+  <div class="sleeve fmt-digital"><img src="covers/guy-gerber-what-to-do-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="What To Do">What To Do</span>
     <span class="artist" title="Guy Gerber">Guy Gerber</span>
@@ -575,8 +620,8 @@
     <span class="variant">EP</span>
   </div>
 </li>
-<li class="card" data-format="cd" data-text="hiroshi suzuki cat columbia">
-  <div class="sleeve cd"><img src="covers/hiroshi-suzuki-cat-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Cat" data-artist="Hiroshi Suzuki" data-year="1975" data-cover="covers/hiroshi-suzuki-cat-cd.jpg" data-text="hiroshi suzuki cat columbia">
+  <div class="sleeve fmt-cd"><img src="covers/hiroshi-suzuki-cat-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Cat">Cat</span>
     <span class="artist" title="Hiroshi Suzuki">Hiroshi Suzuki</span>
@@ -584,8 +629,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="home falling into place">
-  <div class="sleeve digital"><img src="covers/home-falling-into-place-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Falling Into Place" data-artist="HOME" data-year="2016" data-cover="covers/home-falling-into-place-digital.jpg" data-text="home falling into place">
+  <div class="sleeve fmt-digital"><img src="covers/home-falling-into-place-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Falling Into Place">Falling Into Place</span>
     <span class="artist" title="HOME">HOME</span>
@@ -593,8 +638,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="imogen heap speak for yourself megaphonic records 20th anniversary edition">
-  <div class="sleeve cd"><img src="covers/imogen-heap-speak-for-yourself-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Speak For Yourself" data-artist="Imogen Heap" data-year="2005" data-cover="covers/imogen-heap-speak-for-yourself-cd.jpg" data-text="imogen heap speak for yourself megaphonic records 20th anniversary edition">
+  <div class="sleeve fmt-cd"><img src="covers/imogen-heap-speak-for-yourself-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Speak For Yourself">Speak For Yourself</span>
     <span class="artist" title="Imogen Heap">Imogen Heap</span>
@@ -602,8 +647,8 @@
     <span class="variant">20th anniversary edition</span>
   </div>
 </li>
-<li class="card" data-format="cd" data-text="incubus light grenades epic / immortal records">
-  <div class="sleeve cd"><img src="covers/incubus-light-grenades-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Light Grenades" data-artist="Incubus" data-year="2006" data-cover="covers/incubus-light-grenades-cd.jpg" data-text="incubus light grenades epic / immortal records">
+  <div class="sleeve fmt-cd"><img src="covers/incubus-light-grenades-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Light Grenades">Light Grenades</span>
     <span class="artist" title="Incubus">Incubus</span>
@@ -611,8 +656,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="jakatta visions z records">
-  <div class="sleeve digital"><img src="covers/jakatta-visions-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Visions" data-artist="Jakatta" data-year="2002" data-cover="covers/jakatta-visions-digital.jpg" data-text="jakatta visions z records">
+  <div class="sleeve fmt-digital"><img src="covers/jakatta-visions-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Visions">Visions</span>
     <span class="artist" title="Jakatta">Jakatta</span>
@@ -620,8 +665,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="juanes un día normal surco records j.v.">
-  <div class="sleeve cd"><img src="covers/juanes-un-dia-normal-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Un Día Normal" data-artist="Juanes" data-year="2002" data-cover="covers/juanes-un-dia-normal-cd.jpg" data-text="juanes un día normal surco records j.v.">
+  <div class="sleeve fmt-cd"><img src="covers/juanes-un-dia-normal-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Un Día Normal">Un Día Normal</span>
     <span class="artist" title="Juanes">Juanes</span>
@@ -629,8 +674,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="juanes la vida… es un ratico universal music latino deluxe, with dvd">
-  <div class="sleeve cd"><img src="covers/juanes-la-vida-es-un-ratico-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="La Vida… Es Un Ratico" data-artist="Juanes" data-year="2007" data-cover="covers/juanes-la-vida-es-un-ratico-cd.jpg" data-text="juanes la vida… es un ratico universal music latino deluxe, with dvd">
+  <div class="sleeve fmt-cd"><img src="covers/juanes-la-vida-es-un-ratico-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="La Vida… Es Un Ratico">La Vida… Es Un Ratico</span>
     <span class="artist" title="Juanes">Juanes</span>
@@ -638,8 +683,8 @@
     <span class="variant">Deluxe, with DVD</span>
   </div>
 </li>
-<li class="card" data-format="cd" data-text="juanes p.a.r.c.e. universal music latino">
-  <div class="sleeve cd"><img src="covers/juanes-parce-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="P.A.R.C.E." data-artist="Juanes" data-year="2010" data-cover="covers/juanes-parce-cd.jpg" data-text="juanes p.a.r.c.e. universal music latino">
+  <div class="sleeve fmt-cd"><img src="covers/juanes-parce-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="P.A.R.C.E.">P.A.R.C.E.</span>
     <span class="artist" title="Juanes">Juanes</span>
@@ -647,8 +692,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="kaskade 4am ultra music 4am (adam k &amp; soha mix)">
-  <div class="sleeve digital"><img src="covers/kaskade-4am-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="4AM" data-artist="Kaskade" data-year="2010" data-cover="covers/kaskade-4am-digital.jpg" data-text="kaskade 4am ultra music 4am (adam k &amp; soha mix)">
+  <div class="sleeve fmt-digital"><img src="covers/kaskade-4am-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="4AM">4AM</span>
     <span class="artist" title="Kaskade">Kaskade</span>
@@ -656,8 +701,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="kid cudi man on the moon ii: the legend of mr. rager universal motown">
-  <div class="sleeve cd"><img src="covers/kid-cudi-man-on-the-moon-ii-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Man On The Moon II: The Legend Of Mr. Rager" data-artist="Kid Cudi" data-year="2010" data-cover="covers/kid-cudi-man-on-the-moon-ii-cd.jpg" data-text="kid cudi man on the moon ii: the legend of mr. rager universal motown">
+  <div class="sleeve fmt-cd"><img src="covers/kid-cudi-man-on-the-moon-ii-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Man On The Moon II: The Legend Of Mr. Rager">Man On The Moon II: The Legend Of Mr. Rager</span>
     <span class="artist" title="Kid Cudi">Kid Cudi</span>
@@ -665,8 +710,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="the knocks &amp; st. lucia modern hearts interscope records modern hearts">
-  <div class="sleeve digital"><img src="covers/the-knocks-and-st-lucia-modern-hearts-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Modern Hearts" data-artist="The Knocks &amp; St. Lucia" data-year="2013" data-cover="covers/the-knocks-and-st-lucia-modern-hearts-digital.jpg" data-text="the knocks &amp; st. lucia modern hearts interscope records modern hearts">
+  <div class="sleeve fmt-digital"><img src="covers/the-knocks-and-st-lucia-modern-hearts-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Modern Hearts">Modern Hearts</span>
     <span class="artist" title="The Knocks &amp; St. Lucia">The Knocks &amp; St. Lucia</span>
@@ -674,8 +719,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="late night alumni uncharted ultra uncharted">
-  <div class="sleeve digital"><img src="covers/late-night-alumni-uncharted-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Uncharted" data-artist="Late Night Alumni" data-year="2009" data-cover="covers/late-night-alumni-uncharted-digital.jpg" data-text="late night alumni uncharted ultra uncharted">
+  <div class="sleeve fmt-digital"><img src="covers/late-night-alumni-uncharted-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Uncharted">Uncharted</span>
     <span class="artist" title="Late Night Alumni">Late Night Alumni</span>
@@ -683,8 +728,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="lauryn hill the miseducation of lauryn hill ruffhouse records">
-  <div class="sleeve cd"><img src="covers/lauryn-hill-the-miseducation-of-lauryn-hill-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="The Miseducation Of Lauryn Hill" data-artist="Lauryn Hill" data-year="1998" data-cover="covers/lauryn-hill-the-miseducation-of-lauryn-hill-cd.jpg" data-text="lauryn hill the miseducation of lauryn hill ruffhouse records">
+  <div class="sleeve fmt-cd"><img src="covers/lauryn-hill-the-miseducation-of-lauryn-hill-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="The Miseducation Of Lauryn Hill">The Miseducation Of Lauryn Hill</span>
     <span class="artist" title="Lauryn Hill">Lauryn Hill</span>
@@ -692,8 +737,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="le youth feat. emme about us spinnin deep about us (feat. emme)">
-  <div class="sleeve digital"><img src="covers/le-youth-about-us-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="About Us" data-artist="Le Youth feat. Emme" data-year="2020" data-cover="covers/le-youth-about-us-digital.jpg" data-text="le youth feat. emme about us spinnin deep about us (feat. emme)">
+  <div class="sleeve fmt-digital"><img src="covers/le-youth-about-us-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="About Us">About Us</span>
     <span class="artist" title="Le Youth feat. Emme">Le Youth feat. Emme</span>
@@ -701,8 +746,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="marina &amp; the diamonds the family jewels chop shop records / atlantic">
-  <div class="sleeve cd"><img src="covers/marina-and-the-diamonds-the-family-jewels-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="The Family Jewels" data-artist="Marina &amp; The Diamonds" data-year="2010" data-cover="covers/marina-and-the-diamonds-the-family-jewels-cd.jpg" data-text="marina &amp; the diamonds the family jewels chop shop records / atlantic">
+  <div class="sleeve fmt-cd"><img src="covers/marina-and-the-diamonds-the-family-jewels-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="The Family Jewels">The Family Jewels</span>
     <span class="artist" title="Marina &amp; The Diamonds">Marina &amp; The Diamonds</span>
@@ -710,8 +755,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="matthew dear modafinil blues single">
-  <div class="sleeve digital"><img src="covers/matthew-dear-modafinil-blues-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Modafinil Blues" data-artist="Matthew Dear" data-year="2017" data-cover="covers/matthew-dear-modafinil-blues-digital.jpg" data-text="matthew dear modafinil blues single">
+  <div class="sleeve fmt-digital"><img src="covers/matthew-dear-modafinil-blues-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Modafinil Blues">Modafinil Blues</span>
     <span class="artist" title="Matthew Dear">Matthew Dear</span>
@@ -719,8 +764,8 @@
     <span class="variant">Single</span>
   </div>
 </li>
-<li class="card" data-format="digital" data-text="mogwai black bird soundtrack">
-  <div class="sleeve digital"><img src="covers/mogwai-black-bird-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Black Bird" data-artist="Mogwai" data-year="2022" data-cover="covers/mogwai-black-bird-digital.jpg" data-text="mogwai black bird soundtrack">
+  <div class="sleeve fmt-digital"><img src="covers/mogwai-black-bird-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Black Bird">Black Bird</span>
     <span class="artist" title="Mogwai">Mogwai</span>
@@ -728,8 +773,8 @@
     <span class="variant">Soundtrack</span>
   </div>
 </li>
-<li class="card" data-format="digital" data-text="morgan page the longest road nettwerk the longest road feat. lissie (deadmau5 remix)">
-  <div class="sleeve digital"><img src="covers/morgan-page-the-longest-road-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="The Longest Road" data-artist="Morgan Page" data-year="2008" data-cover="covers/morgan-page-the-longest-road-digital.jpg" data-text="morgan page the longest road nettwerk the longest road feat. lissie (deadmau5 remix)">
+  <div class="sleeve fmt-digital"><img src="covers/morgan-page-the-longest-road-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="The Longest Road">The Longest Road</span>
     <span class="artist" title="Morgan Page">Morgan Page</span>
@@ -737,8 +782,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="netsky 2 give &amp; take">
-  <div class="sleeve digital"><img src="covers/netsky-2-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="2" data-artist="Netsky" data-year="2012" data-cover="covers/netsky-2-digital.jpg" data-text="netsky 2 give &amp; take">
+  <div class="sleeve fmt-digital"><img src="covers/netsky-2-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="2">2</span>
     <span class="artist" title="Netsky">Netsky</span>
@@ -746,8 +791,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="odesza summer&#39;s gone">
-  <div class="sleeve digital"><img src="covers/odesza-summers-gone-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Summer&#39;s Gone" data-artist="ODESZA" data-year="2012" data-cover="covers/odesza-summers-gone-digital.jpg" data-text="odesza summer&#39;s gone">
+  <div class="sleeve fmt-digital"><img src="covers/odesza-summers-gone-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Summer&#39;s Gone">Summer&#39;s Gone</span>
     <span class="artist" title="ODESZA">ODESZA</span>
@@ -755,8 +800,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="paradis recto verso barclay / riviera">
-  <div class="sleeve cd"><img src="covers/paradis-recto-verso-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Recto Verso" data-artist="Paradis" data-year="2016" data-cover="covers/paradis-recto-verso-cd.jpg" data-text="paradis recto verso barclay / riviera">
+  <div class="sleeve fmt-cd"><img src="covers/paradis-recto-verso-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Recto Verso">Recto Verso</span>
     <span class="artist" title="Paradis">Paradis</span>
@@ -764,8 +809,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="paradis recto verso barclay / riviera / universal music france white 2018 reissue">
-  <div class="sleeve cd"><img src="covers/paradis-recto-verso-cd-white.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Recto Verso" data-artist="Paradis" data-year="2016" data-cover="covers/paradis-recto-verso-cd-white.jpg" data-text="paradis recto verso barclay / riviera / universal music france white 2018 reissue">
+  <div class="sleeve fmt-cd"><img src="covers/paradis-recto-verso-cd-white.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Recto Verso">Recto Verso</span>
     <span class="artist" title="Paradis">Paradis</span>
@@ -773,8 +818,8 @@
     <span class="variant">White 2018 reissue</span>
   </div>
 </li>
-<li class="card" data-format="digital" data-text="peggy gou moment ep starry night">
-  <div class="sleeve digital"><img src="covers/peggy-gou-moment-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Moment" data-artist="Peggy Gou" data-year="2019" data-cover="covers/peggy-gou-moment-digital.jpg" data-text="peggy gou moment ep starry night">
+  <div class="sleeve fmt-digital"><img src="covers/peggy-gou-moment-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Moment">Moment</span>
     <span class="artist" title="Peggy Gou">Peggy Gou</span>
@@ -782,8 +827,8 @@
     <span class="variant">EP</span>
   </div>
 </li>
-<li class="card" data-format="cd" data-text="polo &amp; pan caravelle hamburger records / ekler&#39;o&#39;shock / caroline records">
-  <div class="sleeve cd"><img src="covers/polo-and-pan-caravelle-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Caravelle" data-artist="Polo &amp; Pan" data-year="2017" data-cover="covers/polo-and-pan-caravelle-cd.jpg" data-text="polo &amp; pan caravelle hamburger records / ekler&#39;o&#39;shock / caroline records">
+  <div class="sleeve fmt-cd"><img src="covers/polo-and-pan-caravelle-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Caravelle">Caravelle</span>
     <span class="artist" title="Polo &amp; Pan">Polo &amp; Pan</span>
@@ -791,8 +836,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="reflekt feat. delline bass need to feel loved altra moda need to feel loved (adam k &amp; soha vocal mix)">
-  <div class="sleeve digital"><img src="covers/reflekt-need-to-feel-loved-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Need To Feel Loved" data-artist="Reflekt feat. Delline Bass" data-year="2004" data-cover="covers/reflekt-need-to-feel-loved-digital.jpg" data-text="reflekt feat. delline bass need to feel loved altra moda need to feel loved (adam k &amp; soha vocal mix)">
+  <div class="sleeve fmt-digital"><img src="covers/reflekt-need-to-feel-loved-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Need To Feel Loved">Need To Feel Loved</span>
     <span class="artist" title="Reflekt feat. Delline Bass">Reflekt feat. Delline Bass</span>
@@ -800,8 +845,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="rüfüs du sol unforgiven sweat it out unforgiven (the presets remix)">
-  <div class="sleeve digital"><img src="covers/rufus-du-sol-unforgiven-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Unforgiven" data-artist="RÜFÜS DU SOL" data-year="2014" data-cover="covers/rufus-du-sol-unforgiven-digital.jpg" data-text="rüfüs du sol unforgiven sweat it out unforgiven (the presets remix)">
+  <div class="sleeve fmt-digital"><img src="covers/rufus-du-sol-unforgiven-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Unforgiven">Unforgiven</span>
     <span class="artist" title="RÜFÜS DU SOL">RÜFÜS DU SOL</span>
@@ -809,8 +854,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="rüfüs du sol bloom until the sun needs to rise">
-  <div class="sleeve digital"><img src="covers/rufus-du-sol-bloom-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Bloom" data-artist="RÜFÜS DU SOL" data-year="2016" data-cover="covers/rufus-du-sol-bloom-digital.jpg" data-text="rüfüs du sol bloom until the sun needs to rise">
+  <div class="sleeve fmt-digital"><img src="covers/rufus-du-sol-bloom-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Bloom">Bloom</span>
     <span class="artist" title="RÜFÜS DU SOL">RÜFÜS DU SOL</span>
@@ -818,8 +863,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="sea power disco elysium golden chariot records soundtrack">
-  <div class="sleeve digital"><img src="covers/sea-power-disco-elysium-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Disco Elysium" data-artist="Sea Power" data-year="2020" data-cover="covers/sea-power-disco-elysium-digital.jpg" data-text="sea power disco elysium golden chariot records soundtrack">
+  <div class="sleeve fmt-digital"><img src="covers/sea-power-disco-elysium-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Disco Elysium">Disco Elysium</span>
     <span class="artist" title="Sea Power">Sea Power</span>
@@ -827,8 +872,8 @@
     <span class="variant">Soundtrack</span>
   </div>
 </li>
-<li class="card" data-format="cd" data-text="snowmine dialects mystery buildings">
-  <div class="sleeve cd"><img src="covers/snowmine-dialects-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Dialects" data-artist="Snowmine" data-year="2014" data-cover="covers/snowmine-dialects-cd.jpg" data-text="snowmine dialects mystery buildings">
+  <div class="sleeve fmt-cd"><img src="covers/snowmine-dialects-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Dialects">Dialects</span>
     <span class="artist" title="Snowmine">Snowmine</span>
@@ -836,8 +881,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="solomun home ninl home (club mix)">
-  <div class="sleeve digital"><img src="covers/solomun-home-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Home" data-artist="Solomun" data-year="2020" data-cover="covers/solomun-home-digital.jpg" data-text="solomun home ninl home (club mix)">
+  <div class="sleeve fmt-digital"><img src="covers/solomun-home-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Home">Home</span>
     <span class="artist" title="Solomun">Solomun</span>
@@ -845,8 +890,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="spoon gimme fiction i turn my camera on">
-  <div class="sleeve digital"><img src="covers/spoon-gimme-fiction-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Gimme Fiction" data-artist="Spoon" data-year="2005" data-cover="covers/spoon-gimme-fiction-digital.jpg" data-text="spoon gimme fiction i turn my camera on">
+  <div class="sleeve fmt-digital"><img src="covers/spoon-gimme-fiction-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Gimme Fiction">Gimme Fiction</span>
     <span class="artist" title="Spoon">Spoon</span>
@@ -854,8 +899,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="stick figure choice is yours choice is yours (feat. slightly stoopid)">
-  <div class="sleeve digital"><img src="covers/stick-figure-choice-is-yours-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Choice is Yours" data-artist="Stick Figure" data-year="2016" data-cover="covers/stick-figure-choice-is-yours-digital.jpg" data-text="stick figure choice is yours choice is yours (feat. slightly stoopid)">
+  <div class="sleeve fmt-digital"><img src="covers/stick-figure-choice-is-yours-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Choice is Yours">Choice is Yours</span>
     <span class="artist" title="Stick Figure">Stick Figure</span>
@@ -863,8 +908,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="sting brand new day a&amp;m records">
-  <div class="sleeve cd"><img src="covers/sting-brand-new-day-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Brand New Day" data-artist="Sting" data-year="1999" data-cover="covers/sting-brand-new-day-cd.jpg" data-text="sting brand new day a&amp;m records">
+  <div class="sleeve fmt-cd"><img src="covers/sting-brand-new-day-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Brand New Day">Brand New Day</span>
     <span class="artist" title="Sting">Sting</span>
@@ -872,8 +917,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="strfkr starfucker rawnald gregory erickson the second">
-  <div class="sleeve digital"><img src="covers/strfkr-starfucker-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Starfucker" data-artist="STRFKR" data-year="2008" data-cover="covers/strfkr-starfucker-digital.jpg" data-text="strfkr starfucker rawnald gregory erickson the second">
+  <div class="sleeve fmt-digital"><img src="covers/strfkr-starfucker-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Starfucker">Starfucker</span>
     <span class="artist" title="STRFKR">STRFKR</span>
@@ -881,8 +926,8 @@
     
   </div>
 </li>
-<li class="card" data-format="digital" data-text="strfkr future past life dear stranger">
-  <div class="sleeve digital"><img src="covers/strfkr-future-past-life-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="digital" data-title="Future Past Life" data-artist="STRFKR" data-year="2020" data-cover="covers/strfkr-future-past-life-digital.jpg" data-text="strfkr future past life dear stranger">
+  <div class="sleeve fmt-digital"><img src="covers/strfkr-future-past-life-digital.jpg" alt="" loading="lazy" width="600" height="600"></div>
   <div class="meta">
     <span class="title" title="Future Past Life">Future Past Life</span>
     <span class="artist" title="STRFKR">STRFKR</span>
@@ -890,8 +935,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="theodore shapiro severance: season 2 (apple tv+ original series soundtrack) mutant">
-  <div class="sleeve cd"><img src="covers/theodore-shapiro-severance-season-2-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Severance: Season 2 (Apple TV+ Original Series Soundtrack)" data-artist="Theodore Shapiro" data-year="2026" data-cover="covers/theodore-shapiro-severance-season-2-cd.jpg" data-text="theodore shapiro severance: season 2 (apple tv+ original series soundtrack) mutant">
+  <div class="sleeve fmt-cd"><img src="covers/theodore-shapiro-severance-season-2-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Severance: Season 2 (Apple TV+ Original Series Soundtrack)">Severance: Season 2 (Apple TV+ Original Series Soundtrack)</span>
     <span class="artist" title="Theodore Shapiro">Theodore Shapiro</span>
@@ -899,8 +944,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="toad the wet sprocket ps (a toad retrospective) columbia compilation">
-  <div class="sleeve cd"><img src="covers/toad-the-wet-sprocket-ps-a-toad-retrospective-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="PS (A Toad Retrospective)" data-artist="Toad The Wet Sprocket" data-year="1999" data-cover="covers/toad-the-wet-sprocket-ps-a-toad-retrospective-cd.jpg" data-text="toad the wet sprocket ps (a toad retrospective) columbia compilation">
+  <div class="sleeve fmt-cd"><img src="covers/toad-the-wet-sprocket-ps-a-toad-retrospective-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="PS (A Toad Retrospective)">PS (A Toad Retrospective)</span>
     <span class="artist" title="Toad The Wet Sprocket">Toad The Wet Sprocket</span>
@@ -908,8 +953,8 @@
     <span class="variant">Compilation</span>
   </div>
 </li>
-<li class="card" data-format="cd" data-text="ulrich schnauss far away trains passing by domino">
-  <div class="sleeve cd"><img src="covers/ulrich-schnauss-far-away-trains-passing-by-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Far Away Trains Passing By" data-artist="Ulrich Schnauss" data-year="2001" data-cover="covers/ulrich-schnauss-far-away-trains-passing-by-cd.jpg" data-text="ulrich schnauss far away trains passing by domino">
+  <div class="sleeve fmt-cd"><img src="covers/ulrich-schnauss-far-away-trains-passing-by-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Far Away Trains Passing By">Far Away Trains Passing By</span>
     <span class="artist" title="Ulrich Schnauss">Ulrich Schnauss</span>
@@ -917,8 +962,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="ulrich schnauss a strangely isolated place domino / city centre offices">
-  <div class="sleeve cd"><img src="covers/ulrich-schnauss-a-strangely-isolated-place-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="A Strangely Isolated Place" data-artist="Ulrich Schnauss" data-year="2003" data-cover="covers/ulrich-schnauss-a-strangely-isolated-place-cd.jpg" data-text="ulrich schnauss a strangely isolated place domino / city centre offices">
+  <div class="sleeve fmt-cd"><img src="covers/ulrich-schnauss-a-strangely-isolated-place-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="A Strangely Isolated Place">A Strangely Isolated Place</span>
     <span class="artist" title="Ulrich Schnauss">Ulrich Schnauss</span>
@@ -926,8 +971,8 @@
     
   </div>
 </li>
-<li class="card" data-format="cd" data-text="ulrich schnauss goodbye scripted realities">
-  <div class="sleeve cd"><img src="covers/ulrich-schnauss-goodbye-cd.jpg" alt="" loading="lazy" width="600" height="600"></div>
+<li class="card" data-format="cd" data-title="Goodbye" data-artist="Ulrich Schnauss" data-year="2007" data-cover="covers/ulrich-schnauss-goodbye-cd.jpg" data-text="ulrich schnauss goodbye scripted realities">
+  <div class="sleeve fmt-cd"><img src="covers/ulrich-schnauss-goodbye-cd.jpg" alt="" loading="lazy" width="600" height="600"><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Goodbye">Goodbye</span>
     <span class="artist" title="Ulrich Schnauss">Ulrich Schnauss</span>
@@ -943,6 +988,7 @@
     <span>updated 11.16.2026 &middot; <a href="albums.json">albums.json</a> &middot; <a href="https://siena.codes">siena.codes</a></span>
   </footer>
 </div>
+<div class="follower cdisc" id="follower" hidden></div>
 <script>
   const tabs = document.querySelectorAll(".tabs button");
   const cards = document.querySelectorAll(".card");
@@ -968,6 +1014,44 @@
   }));
   q.addEventListener("input", apply);
   document.getElementById("clear").addEventListener("click", () => { q.value = ""; apply(); q.focus(); });
+
+  const deck = document.getElementById("deck");
+  const deckRec = document.getElementById("deck-rec");
+  const deckCd = document.getElementById("deck-cd");
+  const withCovers = [...cards].filter(c => c.dataset.cover);
+  let current = null;
+  const spinUp = () => {
+    if (!withCovers.length) return;
+    let pick;
+    do { pick = withCovers[Math.floor(Math.random() * withCovers.length)]; } while (pick === current && withCovers.length > 1);
+    current = pick;
+    const isVinyl = pick.dataset.format === "vinyl";
+    deckRec.hidden = !isVinyl;
+    deckCd.hidden = isVinyl;
+    (isVinyl ? deckRec : deckCd).style.setProperty("--label", `url("${pick.dataset.cover}")`);
+    document.getElementById("deck-title").textContent = pick.dataset.title;
+    document.getElementById("deck-artist").textContent = pick.dataset.artist;
+    document.getElementById("deck-meta").textContent = `${pick.dataset.year} · ${pick.dataset.format}`;
+  };
+  spinUp();
+  setInterval(spinUp, 180000);
+  deck.addEventListener("click", spinUp);
+
+  const follower = document.getElementById("follower");
+  if (matchMedia("(pointer: fine)").matches) {
+    let tx = 0, ty = 0, fx = 0, fy = 0, live = false;
+    document.addEventListener("mousemove", e => {
+      tx = e.clientX; ty = e.clientY;
+      if (!live) { fx = tx; fy = ty; live = true; follower.hidden = false; }
+    });
+    document.addEventListener("mouseleave", () => { live = false; follower.hidden = true; });
+    const chase = () => {
+      fx += (tx - fx) * 0.16; fy += (ty - fy) * 0.16;
+      follower.style.left = fx + "px"; follower.style.top = fy + "px";
+      requestAnimationFrame(chase);
+    };
+    chase();
+  }
 </script>
 </body>
 </html>
