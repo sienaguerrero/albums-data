@@ -117,6 +117,7 @@
   .card { background: var(--paper); border: 2px solid; border-color: var(--silver-hi) var(--silver-lo) var(--silver-lo) var(--silver-hi); outline: 1px solid var(--edge); padding: 6px; }
   .card[hidden] { display: none; }
   .sleeve { position: relative; border: 1px solid var(--silver-lo); }
+  .sleeve a { display: block; }
   .sleeve img, .blank { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; position: relative; z-index: 1; background: #e6e9ef; }
   .card[data-format="vinyl"], .card[data-format="cd"] { padding-right: 22px; }
   .sleeve .rec, .sleeve .cdisc { position: absolute; z-index: 0; animation-play-state: paused; transition: right .45s ease; }
@@ -142,6 +143,7 @@
   .variant { font-size: 11px; color: var(--silver-lo); font-style: italic; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   footer { margin: 16px 0 24px; padding: 6px 10px; font-size: 11px; color: var(--deep); background: linear-gradient(180deg, #ffffff 0%, var(--foam) 100%); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
   footer a { color: var(--deep); }
+  footer .notice { flex-basis: 100%; color: var(--silver-lo); font-size: 10px; }
 </style>
 </head>
 <body>
@@ -170,7 +172,7 @@
   <div class="ticker"><span class="label">New on the shelf</span><div class="scroll"><div class="track"><span class="item"><b>Sea Power</b> &middot; Disco Elysium</span><span class="star">&#10022;</span><span class="item"><b>Spoon</b> &middot; Gimme Fiction</span><span class="star">&#10022;</span><span class="item"><b>Camel Power Club</b> &middot; Sputnik II - Oboe</span><span class="star">&#10022;</span><span class="item"><b>Peggy Gou</b> &middot; Moment</span><span class="star">&#10022;</span><span class="item"><b>Matthew Dear</b> &middot; Modafinil Blues</span><span class="star">&#10022;</span><span class="item"><b>Axel Thesleff</b> &middot; Bad Karma</span><span class="star">&#10022;</span><span class="item"><b>Grizzly Bear</b> &middot; Veckatimest</span><span class="star">&#10022;</span><span class="item"><b>Direct</b> &middot; Too far Away</span><span class="star">&#10022;</span><span class="item"><b>STRFKR</b> &middot; Future Past Life</span><span class="star">&#10022;</span><span class="item"><b>STRFKR</b> &middot; Starfucker</span></div></div></div>
   <ul class="grid">
   <li class="card" data-format="cd" data-title="I Robot" data-artist="The Alan Parsons Project" data-year="1977" data-cover="covers/the-alan-parsons-project-i-robot-cd.jpg" data-text="the alan parsons project i robot cooking vinyl">
-  <div class="sleeve fmt-cd"><img src="covers/the-alan-parsons-project-i-robot-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/35435989" title="Data provided by Discogs"><img src="covers/the-alan-parsons-project-i-robot-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="I Robot">I Robot</span>
     <span class="artist" title="The Alan Parsons Project">The Alan Parsons Project</span>
@@ -179,7 +181,7 @@
   </div>
 </li>
 <li class="card" data-format="vinyl" data-title="Eve" data-artist="The Alan Parsons Project" data-year="1979" data-cover="covers/the-alan-parsons-project-eve-vinyl.jpg" data-text="the alan parsons project eve arista / emi electrola">
-  <div class="sleeve fmt-vinyl"><img src="covers/the-alan-parsons-project-eve-vinyl.jpg" alt="" loading="lazy" width="300" height="300"><span class="rec" aria-hidden="true"><span class="shine"></span></span></div>
+  <div class="sleeve fmt-vinyl"><a href="https://www.discogs.com/release/373919" title="Data provided by Discogs"><img src="covers/the-alan-parsons-project-eve-vinyl.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="rec" aria-hidden="true"><span class="shine"></span></span></div>
   <div class="meta">
     <span class="title" title="Eve">Eve</span>
     <span class="artist" title="The Alan Parsons Project">The Alan Parsons Project</span>
@@ -188,7 +190,7 @@
   </div>
 </li>
 <li class="card" data-format="vinyl" data-title="Eye In The Sky" data-artist="The Alan Parsons Project" data-year="1982" data-cover="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-arista.jpg" data-text="the alan parsons project eye in the sky arista">
-  <div class="sleeve fmt-vinyl"><img src="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-arista.jpg" alt="" loading="lazy" width="300" height="300"><span class="rec" aria-hidden="true"><span class="shine"></span></span></div>
+  <div class="sleeve fmt-vinyl"><a href="https://www.discogs.com/release/13165237" title="Data provided by Discogs"><img src="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-arista.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="rec" aria-hidden="true"><span class="shine"></span></span></div>
   <div class="meta">
     <span class="title" title="Eye In The Sky">Eye In The Sky</span>
     <span class="artist" title="The Alan Parsons Project">The Alan Parsons Project</span>
@@ -197,7 +199,7 @@
   </div>
 </li>
 <li class="card" data-format="vinyl" data-title="Eye In The Sky" data-artist="The Alan Parsons Project" data-year="1982" data-cover="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-cooking-vinyl.jpg" data-text="the alan parsons project eye in the sky cooking vinyl / sony music commercial music group clear vinyl, 2026 remaster">
-  <div class="sleeve fmt-vinyl"><img src="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-cooking-vinyl.jpg" alt="" loading="lazy" width="300" height="300"><span class="rec" aria-hidden="true"><span class="shine"></span></span></div>
+  <div class="sleeve fmt-vinyl"><a href="https://www.discogs.com/release/36899157" title="Data provided by Discogs"><img src="covers/the-alan-parsons-project-eye-in-the-sky-vinyl-cooking-vinyl.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="rec" aria-hidden="true"><span class="shine"></span></span></div>
   <div class="meta">
     <span class="title" title="Eye In The Sky">Eye In The Sky</span>
     <span class="artist" title="The Alan Parsons Project">The Alan Parsons Project</span>
@@ -224,7 +226,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Buena Vista Social Club" data-artist="Buena Vista Social Club" data-year="1997" data-cover="covers/buena-vista-social-club-buena-vista-social-club-cd.jpg" data-text="buena vista social club buena vista social club nonesuch / world circuit">
-  <div class="sleeve fmt-cd"><img src="covers/buena-vista-social-club-buena-vista-social-club-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/10922088" title="Data provided by Discogs"><img src="covers/buena-vista-social-club-buena-vista-social-club-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Buena Vista Social Club">Buena Vista Social Club</span>
     <span class="artist" title="Buena Vista Social Club">Buena Vista Social Club</span>
@@ -260,7 +262,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Sandinista!" data-artist="The Clash" data-year="1980" data-cover="covers/the-clash-sandinista-cd.jpg" data-text="the clash sandinista! columbia 2 cds">
-  <div class="sleeve fmt-cd"><img src="covers/the-clash-sandinista-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/228931" title="Data provided by Discogs"><img src="covers/the-clash-sandinista-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Sandinista!">Sandinista!</span>
     <span class="artist" title="The Clash">The Clash</span>
@@ -269,7 +271,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Collective Soul" data-artist="Collective Soul" data-year="1995" data-cover="covers/collective-soul-collective-soul-cd.jpg" data-text="collective soul collective soul atlantic">
-  <div class="sleeve fmt-cd"><img src="covers/collective-soul-collective-soul-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/441884" title="Data provided by Discogs"><img src="covers/collective-soul-collective-soul-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Collective Soul">Collective Soul</span>
     <span class="artist" title="Collective Soul">Collective Soul</span>
@@ -278,7 +280,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="God Shuffled His Feet" data-artist="Crash Test Dummies" data-year="1993" data-cover="covers/crash-test-dummies-god-shuffled-his-feet-cd.jpg" data-text="crash test dummies god shuffled his feet arista / bmg">
-  <div class="sleeve fmt-cd"><img src="covers/crash-test-dummies-god-shuffled-his-feet-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/14951044" title="Data provided by Discogs"><img src="covers/crash-test-dummies-god-shuffled-his-feet-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="God Shuffled His Feet">God Shuffled His Feet</span>
     <span class="artist" title="Crash Test Dummies">Crash Test Dummies</span>
@@ -530,7 +532,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="The Architect" data-artist="Eidola" data-year="2021" data-cover="covers/eidola-the-architect-cd.jpg" data-text="eidola the architect blue swan records / rise records">
-  <div class="sleeve fmt-cd"><img src="covers/eidola-the-architect-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/20614147" title="Data provided by Discogs"><img src="covers/eidola-the-architect-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="The Architect">The Architect</span>
     <span class="artist" title="Eidola">Eidola</span>
@@ -539,7 +541,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Fleet Foxes" data-artist="Fleet Foxes" data-year="2008" data-cover="covers/fleet-foxes-fleet-foxes-cd.jpg" data-text="fleet foxes fleet foxes sub pop">
-  <div class="sleeve fmt-cd"><img src="covers/fleet-foxes-fleet-foxes-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/1407391" title="Data provided by Discogs"><img src="covers/fleet-foxes-fleet-foxes-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Fleet Foxes">Fleet Foxes</span>
     <span class="artist" title="Fleet Foxes">Fleet Foxes</span>
@@ -548,7 +550,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Sun Giant" data-artist="Fleet Foxes" data-year="2008" data-cover="covers/fleet-foxes-sun-giant-cd.jpg" data-text="fleet foxes sun giant sub pop ep">
-  <div class="sleeve fmt-cd"><img src="covers/fleet-foxes-sun-giant-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/1352555" title="Data provided by Discogs"><img src="covers/fleet-foxes-sun-giant-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Sun Giant">Sun Giant</span>
     <span class="artist" title="Fleet Foxes">Fleet Foxes</span>
@@ -557,7 +559,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="First Collection 2006-2009" data-artist="Fleet Foxes" data-year="2018" data-cover="covers/fleet-foxes-first-collection-2006-2009-cd.jpg" data-text="fleet foxes first collection 2006-2009 sub pop 4 cds">
-  <div class="sleeve fmt-cd"><img src="covers/fleet-foxes-first-collection-2006-2009-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/37547805" title="Data provided by Discogs"><img src="covers/fleet-foxes-first-collection-2006-2009-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="First Collection 2006-2009">First Collection 2006-2009</span>
     <span class="artist" title="Fleet Foxes">Fleet Foxes</span>
@@ -566,7 +568,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Autumn" data-artist="George Winston" data-year="1980" data-cover="covers/george-winston-autumn-cd.jpg" data-text="george winston autumn valley entertainment">
-  <div class="sleeve fmt-cd"><img src="covers/george-winston-autumn-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/12334857" title="Data provided by Discogs"><img src="covers/george-winston-autumn-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Autumn">Autumn</span>
     <span class="artist" title="George Winston">George Winston</span>
@@ -575,7 +577,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="December" data-artist="George Winston" data-year="1982" data-cover="covers/george-winston-december-cd.jpg" data-text="george winston december windham hill records / dancing cat records 20th anniversary edition">
-  <div class="sleeve fmt-cd"><img src="covers/george-winston-december-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/30800817" title="Data provided by Discogs"><img src="covers/george-winston-december-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="December">December</span>
     <span class="artist" title="George Winston">George Winston</span>
@@ -584,7 +586,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Summer" data-artist="George Winston" data-year="1991" data-cover="covers/george-winston-summer-cd.jpg" data-text="george winston summer valley entertainment">
-  <div class="sleeve fmt-cd"><img src="covers/george-winston-summer-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/12062682" title="Data provided by Discogs"><img src="covers/george-winston-summer-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Summer">Summer</span>
     <span class="artist" title="George Winston">George Winston</span>
@@ -602,7 +604,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Deep State" data-artist="Grum" data-year="2019" data-cover="covers/grum-deep-state-cd.jpg" data-text="grum deep state anjunabeats">
-  <div class="sleeve fmt-cd"><img src="covers/grum-deep-state-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/14372734" title="Data provided by Discogs"><img src="covers/grum-deep-state-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Deep State">Deep State</span>
     <span class="artist" title="Grum">Grum</span>
@@ -620,7 +622,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Cat" data-artist="Hiroshi Suzuki" data-year="1975" data-cover="covers/hiroshi-suzuki-cat-cd.jpg" data-text="hiroshi suzuki cat columbia">
-  <div class="sleeve fmt-cd"><img src="covers/hiroshi-suzuki-cat-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/6394073" title="Data provided by Discogs"><img src="covers/hiroshi-suzuki-cat-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Cat">Cat</span>
     <span class="artist" title="Hiroshi Suzuki">Hiroshi Suzuki</span>
@@ -638,7 +640,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Speak For Yourself" data-artist="Imogen Heap" data-year="2005" data-cover="covers/imogen-heap-speak-for-yourself-cd.jpg" data-text="imogen heap speak for yourself megaphonic records 20th anniversary edition">
-  <div class="sleeve fmt-cd"><img src="covers/imogen-heap-speak-for-yourself-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/36050815" title="Data provided by Discogs"><img src="covers/imogen-heap-speak-for-yourself-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Speak For Yourself">Speak For Yourself</span>
     <span class="artist" title="Imogen Heap">Imogen Heap</span>
@@ -647,7 +649,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Light Grenades" data-artist="Incubus" data-year="2006" data-cover="covers/incubus-light-grenades-cd.jpg" data-text="incubus light grenades epic / immortal records">
-  <div class="sleeve fmt-cd"><img src="covers/incubus-light-grenades-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/1335553" title="Data provided by Discogs"><img src="covers/incubus-light-grenades-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Light Grenades">Light Grenades</span>
     <span class="artist" title="Incubus">Incubus</span>
@@ -665,7 +667,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Un Día Normal" data-artist="Juanes" data-year="2002" data-cover="covers/juanes-un-dia-normal-cd.jpg" data-text="juanes un día normal surco records j.v.">
-  <div class="sleeve fmt-cd"><img src="covers/juanes-un-dia-normal-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/3458729" title="Data provided by Discogs"><img src="covers/juanes-un-dia-normal-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Un Día Normal">Un Día Normal</span>
     <span class="artist" title="Juanes">Juanes</span>
@@ -674,7 +676,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="La Vida… Es Un Ratico" data-artist="Juanes" data-year="2007" data-cover="covers/juanes-la-vida-es-un-ratico-cd.jpg" data-text="juanes la vida… es un ratico universal music latino deluxe, with dvd">
-  <div class="sleeve fmt-cd"><img src="covers/juanes-la-vida-es-un-ratico-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/14406041" title="Data provided by Discogs"><img src="covers/juanes-la-vida-es-un-ratico-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="La Vida… Es Un Ratico">La Vida… Es Un Ratico</span>
     <span class="artist" title="Juanes">Juanes</span>
@@ -683,7 +685,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="P.A.R.C.E." data-artist="Juanes" data-year="2010" data-cover="covers/juanes-parce-cd.jpg" data-text="juanes p.a.r.c.e. universal music latino">
-  <div class="sleeve fmt-cd"><img src="covers/juanes-parce-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/3823398" title="Data provided by Discogs"><img src="covers/juanes-parce-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="P.A.R.C.E.">P.A.R.C.E.</span>
     <span class="artist" title="Juanes">Juanes</span>
@@ -701,7 +703,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Man On The Moon II: The Legend Of Mr. Rager" data-artist="Kid Cudi" data-year="2010" data-cover="covers/kid-cudi-man-on-the-moon-ii-cd.jpg" data-text="kid cudi man on the moon ii: the legend of mr. rager universal motown">
-  <div class="sleeve fmt-cd"><img src="covers/kid-cudi-man-on-the-moon-ii-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/2617698" title="Data provided by Discogs"><img src="covers/kid-cudi-man-on-the-moon-ii-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Man On The Moon II: The Legend Of Mr. Rager">Man On The Moon II: The Legend Of Mr. Rager</span>
     <span class="artist" title="Kid Cudi">Kid Cudi</span>
@@ -728,7 +730,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="The Miseducation Of Lauryn Hill" data-artist="Lauryn Hill" data-year="1998" data-cover="covers/lauryn-hill-the-miseducation-of-lauryn-hill-cd.jpg" data-text="lauryn hill the miseducation of lauryn hill ruffhouse records">
-  <div class="sleeve fmt-cd"><img src="covers/lauryn-hill-the-miseducation-of-lauryn-hill-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/3871638" title="Data provided by Discogs"><img src="covers/lauryn-hill-the-miseducation-of-lauryn-hill-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="The Miseducation Of Lauryn Hill">The Miseducation Of Lauryn Hill</span>
     <span class="artist" title="Lauryn Hill">Lauryn Hill</span>
@@ -746,7 +748,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="The Family Jewels" data-artist="Marina &amp; The Diamonds" data-year="2010" data-cover="covers/marina-and-the-diamonds-the-family-jewels-cd.jpg" data-text="marina &amp; the diamonds the family jewels chop shop records / atlantic">
-  <div class="sleeve fmt-cd"><img src="covers/marina-and-the-diamonds-the-family-jewels-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/2301439" title="Data provided by Discogs"><img src="covers/marina-and-the-diamonds-the-family-jewels-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="The Family Jewels">The Family Jewels</span>
     <span class="artist" title="Marina &amp; The Diamonds">Marina &amp; The Diamonds</span>
@@ -800,7 +802,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Recto Verso" data-artist="Paradis" data-year="2016" data-cover="covers/paradis-recto-verso-cd.jpg" data-text="paradis recto verso barclay / riviera">
-  <div class="sleeve fmt-cd"><img src="covers/paradis-recto-verso-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/9082509" title="Data provided by Discogs"><img src="covers/paradis-recto-verso-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Recto Verso">Recto Verso</span>
     <span class="artist" title="Paradis">Paradis</span>
@@ -809,7 +811,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Recto Verso" data-artist="Paradis" data-year="2016" data-cover="covers/paradis-recto-verso-cd-white.jpg" data-text="paradis recto verso barclay / riviera / universal music france white 2018 reissue">
-  <div class="sleeve fmt-cd"><img src="covers/paradis-recto-verso-cd-white.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/22054231" title="Data provided by Discogs"><img src="covers/paradis-recto-verso-cd-white.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Recto Verso">Recto Verso</span>
     <span class="artist" title="Paradis">Paradis</span>
@@ -827,7 +829,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Caravelle" data-artist="Polo &amp; Pan" data-year="2017" data-cover="covers/polo-and-pan-caravelle-cd.jpg" data-text="polo &amp; pan caravelle hamburger records / ekler&#39;o&#39;shock / caroline records">
-  <div class="sleeve fmt-cd"><img src="covers/polo-and-pan-caravelle-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/10375811" title="Data provided by Discogs"><img src="covers/polo-and-pan-caravelle-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Caravelle">Caravelle</span>
     <span class="artist" title="Polo &amp; Pan">Polo &amp; Pan</span>
@@ -872,7 +874,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Dialects" data-artist="Snowmine" data-year="2014" data-cover="covers/snowmine-dialects-cd.jpg" data-text="snowmine dialects mystery buildings">
-  <div class="sleeve fmt-cd"><img src="covers/snowmine-dialects-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/5548062" title="Data provided by Discogs"><img src="covers/snowmine-dialects-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Dialects">Dialects</span>
     <span class="artist" title="Snowmine">Snowmine</span>
@@ -908,7 +910,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Brand New Day" data-artist="Sting" data-year="1999" data-cover="covers/sting-brand-new-day-cd.jpg" data-text="sting brand new day a&amp;m records">
-  <div class="sleeve fmt-cd"><img src="covers/sting-brand-new-day-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/686416" title="Data provided by Discogs"><img src="covers/sting-brand-new-day-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Brand New Day">Brand New Day</span>
     <span class="artist" title="Sting">Sting</span>
@@ -935,7 +937,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Severance: Season 2 (Apple TV+ Original Series Soundtrack)" data-artist="Theodore Shapiro" data-year="2026" data-cover="covers/theodore-shapiro-severance-season-2-cd.jpg" data-text="theodore shapiro severance: season 2 (apple tv+ original series soundtrack) mutant">
-  <div class="sleeve fmt-cd"><img src="covers/theodore-shapiro-severance-season-2-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/36514804" title="Data provided by Discogs"><img src="covers/theodore-shapiro-severance-season-2-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Severance: Season 2 (Apple TV+ Original Series Soundtrack)">Severance: Season 2 (Apple TV+ Original Series Soundtrack)</span>
     <span class="artist" title="Theodore Shapiro">Theodore Shapiro</span>
@@ -944,7 +946,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="PS (A Toad Retrospective)" data-artist="Toad The Wet Sprocket" data-year="1999" data-cover="covers/toad-the-wet-sprocket-ps-a-toad-retrospective-cd.jpg" data-text="toad the wet sprocket ps (a toad retrospective) columbia compilation">
-  <div class="sleeve fmt-cd"><img src="covers/toad-the-wet-sprocket-ps-a-toad-retrospective-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/1141032" title="Data provided by Discogs"><img src="covers/toad-the-wet-sprocket-ps-a-toad-retrospective-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="PS (A Toad Retrospective)">PS (A Toad Retrospective)</span>
     <span class="artist" title="Toad The Wet Sprocket">Toad The Wet Sprocket</span>
@@ -953,7 +955,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Far Away Trains Passing By" data-artist="Ulrich Schnauss" data-year="2001" data-cover="covers/ulrich-schnauss-far-away-trains-passing-by-cd.jpg" data-text="ulrich schnauss far away trains passing by domino">
-  <div class="sleeve fmt-cd"><img src="covers/ulrich-schnauss-far-away-trains-passing-by-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/557096" title="Data provided by Discogs"><img src="covers/ulrich-schnauss-far-away-trains-passing-by-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Far Away Trains Passing By">Far Away Trains Passing By</span>
     <span class="artist" title="Ulrich Schnauss">Ulrich Schnauss</span>
@@ -962,7 +964,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="A Strangely Isolated Place" data-artist="Ulrich Schnauss" data-year="2003" data-cover="covers/ulrich-schnauss-a-strangely-isolated-place-cd.jpg" data-text="ulrich schnauss a strangely isolated place domino / city centre offices">
-  <div class="sleeve fmt-cd"><img src="covers/ulrich-schnauss-a-strangely-isolated-place-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/11395678" title="Data provided by Discogs"><img src="covers/ulrich-schnauss-a-strangely-isolated-place-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="A Strangely Isolated Place">A Strangely Isolated Place</span>
     <span class="artist" title="Ulrich Schnauss">Ulrich Schnauss</span>
@@ -971,7 +973,7 @@
   </div>
 </li>
 <li class="card" data-format="cd" data-title="Goodbye" data-artist="Ulrich Schnauss" data-year="2007" data-cover="covers/ulrich-schnauss-goodbye-cd.jpg" data-text="ulrich schnauss goodbye scripted realities">
-  <div class="sleeve fmt-cd"><img src="covers/ulrich-schnauss-goodbye-cd.jpg" alt="" loading="lazy" width="300" height="300"><span class="cdisc" aria-hidden="true"></span></div>
+  <div class="sleeve fmt-cd"><a href="https://www.discogs.com/release/15344679" title="Data provided by Discogs"><img src="covers/ulrich-schnauss-goodbye-cd.jpg" alt="" loading="lazy" width="300" height="300"></a><span class="cdisc" aria-hidden="true"></span></div>
   <div class="meta">
     <span class="title" title="Goodbye">Goodbye</span>
     <span class="artist" title="Ulrich Schnauss">Ulrich Schnauss</span>
@@ -985,6 +987,7 @@
   <footer class="bevel">
     <span>90 on the shelf &middot; 32 CD &middot; 3 Vinyl &middot; 55 digital records, 26 of them partial</span>
     <span>updated 11.16.2026 &middot; <a href="albums.json">albums.json</a> &middot; <a href="https://siena.codes">siena.codes</a></span>
+    <span class="notice">CD and vinyl covers: <a href="https://www.discogs.com">data provided by Discogs</a>; each one links to its release. This site uses Discogs&rsquo; API but is not affiliated with, sponsored or endorsed by Discogs. &lsquo;Discogs&rsquo; is a trademark of Zink Media, LLC.</span>
   </footer>
 </div>
 <div class="follower cdisc" id="follower" hidden></div>
