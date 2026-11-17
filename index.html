@@ -1037,8 +1037,9 @@
   setInterval(spinUp, 180000);
   deck.addEventListener("click", spinUp);
 
+  const cursorCd = false;
   const follower = document.getElementById("follower");
-  if (matchMedia("(pointer: fine)").matches) {
+  if (cursorCd && matchMedia("(pointer: fine)").matches) {
     let tx = 0, ty = 0, fx = 0, fy = 0, live = false;
     document.addEventListener("mousemove", e => {
       tx = e.clientX; ty = e.clientY;
