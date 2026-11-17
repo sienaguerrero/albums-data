@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-17T06:32:28Z",
+  "generated": "2026-11-17T06:32:31Z",
   "captured": "2026-11-16",
   "counts": {
-    "tracks": 167,
-    "loved": 87,
-    "plays": 10953
+    "tracks": 195,
+    "loved": 98,
+    "plays": 11919
   },
   "tracks": [
     {
@@ -1834,6 +1834,50 @@
       "captured": "2026-11-16"
     },
     {
+      "title": "No Creo en el Jamás",
+      "artist": "Juanes",
+      "album": "La Vida... Es Un Ratico",
+      "length": "3:33",
+      "genre": "Latin",
+      "loved": false,
+      "plays": 36,
+      "added": "2014-05-28",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "If You Don't (feat. Cumulus)",
+      "artist": "ODESZA",
+      "album": "Summer's Gone",
+      "length": "3:09",
+      "genre": "Electronic",
+      "loved": false,
+      "plays": 36,
+      "added": "2017-09-10",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Starry Night",
+      "artist": "Peggy Gou",
+      "album": "Moment - EP",
+      "length": "6:39",
+      "genre": "Dance",
+      "loved": true,
+      "plays": 36,
+      "added": "2022-01-16",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "California Roll (feat. Stevie Wonder)",
+      "artist": "Snoop Dogg",
+      "album": "BUSH",
+      "length": "4:12",
+      "genre": "Hip-Hop/Rap",
+      "loved": false,
+      "plays": 36,
+      "added": "2018-09-30",
+      "captured": "2026-11-16"
+    },
+    {
       "title": "The Turn of a Friendly Card, Pt. 1",
       "artist": "The Alan Parsons Project",
       "album": "The Turn of a Friendly Card (Bonus Track Version)",
@@ -1842,6 +1886,270 @@
       "loved": false,
       "plays": 36,
       "added": "2017-06-20",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "A Lie For Breakfast (2019 remaster)",
+      "artist": "Ulrich Schnauss",
+      "album": "Now Is a Timeless Present: A Retrospective",
+      "length": "6:09",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 36,
+      "added": "2020-02-12",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Is This Trance?",
+      "artist": "Yotto",
+      "album": "Is This Trance? - Single",
+      "length": "4:49",
+      "genre": "Dance",
+      "loved": false,
+      "plays": 36,
+      "added": "2019-12-09",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "A Horse With No Name",
+      "artist": "America",
+      "album": "America's Greatest Hits: History",
+      "length": "4:12",
+      "genre": "Rock",
+      "loved": true,
+      "plays": 35,
+      "added": "2019-03-02",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Surge",
+      "artist": "Crinkles",
+      "album": "Soundtrack from a Box 17",
+      "length": "4:34",
+      "genre": null,
+      "loved": true,
+      "plays": 35,
+      "added": "2021-01-19",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Lark",
+      "artist": "Direct",
+      "album": "Lark - Single",
+      "length": "4:11",
+      "genre": "Dance",
+      "loved": false,
+      "plays": 35,
+      "added": "2017-09-28",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Time in a Bottle",
+      "artist": "Jim Croce",
+      "album": "You Don't Mess Around with Jim",
+      "length": "2:29",
+      "genre": "Folk",
+      "loved": false,
+      "plays": 35,
+      "added": "2015-02-16",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "At Least",
+      "artist": "Napkey",
+      "album": "At Least (Remixes) - EP",
+      "length": "2:48",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 35,
+      "added": "2019-08-29",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Home",
+      "artist": "Solomun",
+      "album": "Nobody Is Not Loved",
+      "length": "3:41",
+      "genre": "House",
+      "loved": true,
+      "plays": 35,
+      "added": "2024-03-04",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Children of the Moon",
+      "artist": "The Alan Parsons Project",
+      "album": "Eye In the Sky",
+      "length": "4:51",
+      "genre": "Rock",
+      "loved": false,
+      "plays": 35,
+      "added": "2025-10-14",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Ace's Song",
+      "artist": "Achintaya Baced B",
+      "album": null,
+      "length": "4:33",
+      "genre": null,
+      "loved": false,
+      "plays": 34,
+      "added": "2017-03-28",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Bandera De Manos",
+      "artist": "Juanes",
+      "album": "La Vida... Es Un Ratico",
+      "length": "4:06",
+      "genre": "Latin",
+      "loved": false,
+      "plays": 34,
+      "added": "2026-03-27",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Blue Jeans",
+      "artist": "Lana Del Rey",
+      "album": "Born To Die",
+      "length": "3:30",
+      "genre": "Pop",
+      "loved": false,
+      "plays": 34,
+      "added": "2014-04-24",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Modafinil Blues",
+      "artist": "Matthew Dear",
+      "album": "Bunny",
+      "length": "5:01",
+      "genre": "Electronic",
+      "loved": false,
+      "plays": 34,
+      "added": "2024-05-20",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Sunrise",
+      "artist": "Norah Jones",
+      "album": "Feels Like Home",
+      "length": "3:20",
+      "genre": "Singer/Songwriter",
+      "loved": true,
+      "plays": 34,
+      "added": "2020-03-24",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Nangs",
+      "artist": "Tame Impala",
+      "album": "Currents",
+      "length": "1:48",
+      "genre": "Alternative",
+      "loved": false,
+      "plays": 34,
+      "added": "2017-05-28",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Mammagamma (Instrumental)",
+      "artist": "The Alan Parsons Project",
+      "album": "Eye In the Sky",
+      "length": "3:34",
+      "genre": "Rock",
+      "loved": false,
+      "plays": 34,
+      "added": "2025-10-14",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Some Other Time",
+      "artist": "The Alan Parsons Project",
+      "album": "I Robot",
+      "length": "4:05",
+      "genre": "Soft Rock",
+      "loved": false,
+      "plays": 34,
+      "added": "2016-02-16",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Between Us and Them",
+      "artist": "Ulrich Schnauss",
+      "album": "Far Away Trains Passing By",
+      "length": "7:17",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 34,
+      "added": "2018-07-03",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Einfeld (2019 remaster)",
+      "artist": "Ulrich Schnauss",
+      "album": "Goodbye",
+      "length": "5:28",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 34,
+      "added": "2020-05-07",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Meadow",
+      "artist": "Crinkles",
+      "album": "Soundtrack from a Box 19",
+      "length": "5:00",
+      "genre": null,
+      "loved": true,
+      "plays": 33,
+      "added": "2021-01-19",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Too Far Away",
+      "artist": "Direct",
+      "album": "Monstercat Uncaged, Vol. 2",
+      "length": "3:55",
+      "genre": "Dance",
+      "loved": false,
+      "plays": 33,
+      "added": "2017-09-28",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Toes",
+      "artist": "Glass Animals",
+      "album": "Zaba",
+      "length": "4:15",
+      "genre": "Alternative",
+      "loved": true,
+      "plays": 33,
+      "added": "2020-05-23",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "I Wouldn't Want To Be Like You",
+      "artist": "The Alan Parsons Project",
+      "album": "I Robot",
+      "length": "3:24",
+      "genre": "Soft Rock",
+      "loved": false,
+      "plays": 33,
+      "added": "2014-02-03",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Listen to the Music",
+      "artist": "The Doobie Brothers",
+      "album": "Toulouse Street",
+      "length": "3:46",
+      "genre": "Southern Rock",
+      "loved": false,
+      "plays": 33,
+      "added": "2016-04-26",
       "captured": "2026-11-16"
     }
   ]
