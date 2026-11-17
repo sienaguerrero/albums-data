@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-17T06:32:24Z",
+  "generated": "2026-11-17T06:32:28Z",
   "captured": "2026-11-16",
   "counts": {
-    "tracks": 134,
-    "loved": 72,
-    "plays": 9666
+    "tracks": 167,
+    "loved": 87,
+    "plays": 10953
   },
   "tracks": [
     {
@@ -1479,6 +1479,369 @@
       "loved": false,
       "plays": 42,
       "added": "2017-04-08",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Something's Always Wrong",
+      "artist": "Toad the Wet Sprocket",
+      "album": "P.S.: A Toad Retrospective",
+      "length": "4:00",
+      "genre": "Rock",
+      "loved": false,
+      "plays": 42,
+      "added": "2014-02-03",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Stars (2019 remaster)",
+      "artist": "Ulrich Schnauss",
+      "album": "Goodbye",
+      "length": "6:19",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 42,
+      "added": "2020-05-07",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Ventura Highway",
+      "artist": "America",
+      "album": "Homecoming",
+      "length": "3:32",
+      "genre": "Rock",
+      "loved": true,
+      "plays": 41,
+      "added": "2020-05-11",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Enough To Believe",
+      "artist": "Bob Moses",
+      "album": "Battle Lines",
+      "length": "4:40",
+      "genre": "Dance & House",
+      "loved": false,
+      "plays": 41,
+      "added": "2026-04-18",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Cassette",
+      "artist": "Crinkles",
+      "album": "Soundtrack from a Box 21",
+      "length": "4:55",
+      "genre": null,
+      "loved": true,
+      "plays": 41,
+      "added": "2021-01-19",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Gasolina",
+      "artist": "Daddy Yankee",
+      "album": "Gasolina (Single)",
+      "length": "3:13",
+      "genre": "Reggae",
+      "loved": false,
+      "plays": 41,
+      "added": "2014-06-23",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Wait For It",
+      "artist": "Original Broadway Cast of Hamilton",
+      "album": "Hamilton (Original Broadway Cast Recording)",
+      "length": "3:14",
+      "genre": "Soundtrack",
+      "loved": true,
+      "plays": 41,
+      "added": "2017-08-03",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Canopée",
+      "artist": "Polo & Pan",
+      "album": "Canopée - Single",
+      "length": "4:36",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 41,
+      "added": "2019-08-29",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "More Than a Feeling",
+      "artist": "Boston",
+      "album": "Madagascar 2: Escape 2 Africa",
+      "length": "4:45",
+      "genre": "Soundtrack",
+      "loved": false,
+      "plays": 40,
+      "added": "2009-04-24",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Tubthumping",
+      "artist": "Chumbawumba",
+      "album": "Treadmill Training: Mixed Terrain 1",
+      "length": "3:57",
+      "genre": "R&B/Soul",
+      "loved": true,
+      "plays": 40,
+      "added": "2011-01-13",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Pink Houses",
+      "artist": "John Cougar Mellencamp",
+      "album": "The Best That I Could Do: 1978-1988",
+      "length": "4:44",
+      "genre": "Rock",
+      "loved": false,
+      "plays": 40,
+      "added": "2020-03-01",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Dorothy",
+      "artist": "Polo & Pan",
+      "album": "Caravelle",
+      "length": "5:17",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 40,
+      "added": "2019-09-26",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "no tears left to cry",
+      "artist": "Ariana Grande",
+      "album": "Sweetener",
+      "length": "3:26",
+      "genre": "Pop",
+      "loved": false,
+      "plays": 39,
+      "added": "2018-08-26",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Criminal",
+      "artist": "Fiona Apple",
+      "album": "Tidal",
+      "length": "5:42",
+      "genre": "Alternative",
+      "loved": true,
+      "plays": 39,
+      "added": "2020-03-03",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "8TEEN",
+      "artist": "Khalid",
+      "album": "American Teen",
+      "length": "3:49",
+      "genre": "R&B/Soul",
+      "loved": true,
+      "plays": 39,
+      "added": "2018-03-24",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Rely",
+      "artist": "ODESZA",
+      "album": "Summer's Gone",
+      "length": "3:15",
+      "genre": "Electronic",
+      "loved": false,
+      "plays": 39,
+      "added": "2017-09-10",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Music to Walk Home By",
+      "artist": "Tame Impala",
+      "album": "Lonerism",
+      "length": "5:12",
+      "genre": "Alternative",
+      "loved": true,
+      "plays": 39,
+      "added": "2018-03-08",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Talk",
+      "artist": "Why Don't We",
+      "album": "Talk - Single",
+      "length": "3:10",
+      "genre": "Pop",
+      "loved": true,
+      "plays": 39,
+      "added": "2020-01-27",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Epilogue (feat. CAPS)",
+      "artist": "YOTTO",
+      "album": "Hyperfall",
+      "length": "5:23",
+      "genre": "Dance",
+      "loved": false,
+      "plays": 39,
+      "added": "2019-12-09",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Young Dumb & Broke",
+      "artist": "Khalid",
+      "album": "American Teen",
+      "length": "3:23",
+      "genre": "R&B/Soul",
+      "loved": true,
+      "plays": 38,
+      "added": "2018-03-24",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Free Bird",
+      "artist": "Lynyrd Skynyrd",
+      "album": "Pronounced' Leh-'Nerd 'Skin-'Nerd",
+      "length": "9:13",
+      "genre": "Rock",
+      "loved": false,
+      "plays": 38,
+      "added": "2020-05-11",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Arc-En-Ciel",
+      "artist": "Polo & Pan",
+      "album": "Arc-En-Ciel - Single",
+      "length": "3:51",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 38,
+      "added": "2019-09-25",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Do It Till We Drop",
+      "artist": "S Club 7",
+      "album": "Don't Stop Movin'",
+      "length": "3:43",
+      "genre": "Pop",
+      "loved": false,
+      "plays": 38,
+      "added": "2014-05-09",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Gossip",
+      "artist": "Tame Impala",
+      "album": "Currents",
+      "length": "0:55",
+      "genre": "Alternative",
+      "loved": false,
+      "plays": 38,
+      "added": "2017-05-28",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "We Used to Be Friends (Theme from Veronica Mars)",
+      "artist": "The Dandy Warhols",
+      "album": "Veronica Mars (Original Television Soundtrack)",
+      "length": "3:21",
+      "genre": "Soundtrack",
+      "loved": false,
+      "plays": 38,
+      "added": "2012-08-31",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Goodbye (2019 remaster)",
+      "artist": "Ulrich Schnauss",
+      "album": "Now Is a Timeless Present: A Retrospective",
+      "length": "7:54",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 38,
+      "added": "2020-02-12",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "We Are the Lights",
+      "artist": "Varien & Mr FijiWiji",
+      "album": "We Are the Lights - Single",
+      "length": "4:06",
+      "genre": "Dance",
+      "loved": false,
+      "plays": 38,
+      "added": "2017-09-26",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Does Anybody Really Know What Time It Is?",
+      "artist": "Chicago",
+      "album": "The Very Best of Chicago - Only the Beginning",
+      "length": "3:21",
+      "genre": "Rock",
+      "loved": false,
+      "plays": 37,
+      "added": "2014-02-03",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Minas Piedras",
+      "artist": "Juanes",
+      "album": "La Vida... Es Un Ratico",
+      "length": "4:06",
+      "genre": "Latin",
+      "loved": false,
+      "plays": 37,
+      "added": "2026-03-27",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Song for No One",
+      "artist": "Miike Snow",
+      "album": "Miike Snow",
+      "length": "4:09",
+      "genre": "Alternative",
+      "loved": false,
+      "plays": 37,
+      "added": "2011-08-02",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Love Forever (2019 remaster)",
+      "artist": "Ulrich Schnauss",
+      "album": "Goodbye",
+      "length": "5:57",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 37,
+      "added": "2020-05-07",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Fade Away (feat. SPELLES)",
+      "artist": "Claptone",
+      "album": "Closer",
+      "length": "2:57",
+      "genre": "Electronic",
+      "loved": false,
+      "plays": 36,
+      "added": "2024-03-04",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "The Turn of a Friendly Card, Pt. 1",
+      "artist": "The Alan Parsons Project",
+      "album": "The Turn of a Friendly Card (Bonus Track Version)",
+      "length": "2:45",
+      "genre": "Rock",
+      "loved": false,
+      "plays": 36,
+      "added": "2017-06-20",
       "captured": "2026-11-16"
     }
   ]
