@@ -1,10 +1,10 @@
 {
-  "generated": "2026-11-17T06:32:31Z",
+  "generated": "2026-11-17T06:32:35Z",
   "captured": "2026-11-16",
   "counts": {
-    "tracks": 195,
-    "loved": 98,
-    "plays": 11919
+    "tracks": 225,
+    "loved": 112,
+    "plays": 12868
   },
   "tracks": [
     {
@@ -2131,6 +2131,72 @@
       "captured": "2026-11-16"
     },
     {
+      "title": "Home",
+      "artist": "Grum",
+      "album": "Deep State",
+      "length": "6:48",
+      "genre": "Dance",
+      "loved": true,
+      "plays": 33,
+      "added": "2020-01-11",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Black Wave",
+      "artist": "K.Flay",
+      "album": "Every Where Is Some Where",
+      "length": "3:38",
+      "genre": "Alternative",
+      "loved": true,
+      "plays": 33,
+      "added": "2020-02-28",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Bits and Pieces Shortened",
+      "artist": "Martin O'Donnell & Michael Salvatori",
+      "album": "Halo 3 ODST (Original Soundtrack)",
+      "length": "2:33",
+      "genre": "Soundtrack",
+      "loved": false,
+      "plays": 33,
+      "added": "2014-02-03",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "I Took A Pill In Ibiza (SeeB Remix)",
+      "artist": "Mike Posner",
+      "album": null,
+      "length": "3:20",
+      "genre": null,
+      "loved": false,
+      "plays": 33,
+      "added": "2016-09-17",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Sound of the Sea",
+      "artist": "Stick Figure",
+      "album": "Set in Stone",
+      "length": "5:25",
+      "genre": "Reggae",
+      "loved": true,
+      "plays": 33,
+      "added": "2019-09-26",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "'Cause I'm a Man",
+      "artist": "Tame Impala",
+      "album": "Currents",
+      "length": "4:02",
+      "genre": "Alternative",
+      "loved": false,
+      "plays": 33,
+      "added": "2017-04-08",
+      "captured": "2026-11-16"
+    },
+    {
       "title": "I Wouldn't Want To Be Like You",
       "artist": "The Alan Parsons Project",
       "album": "I Robot",
@@ -2150,6 +2216,270 @@
       "loved": false,
       "plays": 33,
       "added": "2016-04-26",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Tuesday Maybe",
+      "artist": "Way Out West",
+      "album": "Tuesday Maybe",
+      "length": "8:12",
+      "genre": "Dance",
+      "loved": true,
+      "plays": 33,
+      "added": "2024-03-04",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Afternoons and Coffeespoons",
+      "artist": "Crash Test Dummies",
+      "album": "God Shuffled His Feet",
+      "length": "3:56",
+      "genre": "Alternative",
+      "loved": false,
+      "plays": 32,
+      "added": "2014-04-05",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "We Are the People",
+      "artist": "Empire Of The Sun",
+      "album": "Walking on a Dream (10th Anniversary Edition)",
+      "length": "4:27",
+      "genre": "Alternative",
+      "loved": false,
+      "plays": 32,
+      "added": "2019-11-22",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Inside Out",
+      "artist": "Eve 6",
+      "album": "Eve 6",
+      "length": "3:39",
+      "genre": "Pop",
+      "loved": true,
+      "plays": 32,
+      "added": "2014-10-06",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Easy",
+      "artist": "Faith No More",
+      "album": "Angel Dust (Deluxe Edition)",
+      "length": "3:07",
+      "genre": "Hard Rock",
+      "loved": false,
+      "plays": 32,
+      "added": "2020-03-03",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Fiore & I",
+      "artist": "Fellini Félin",
+      "album": "Temporary Fiction - EP",
+      "length": "4:54",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 32,
+      "added": "2019-09-24",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Champagne Supernova",
+      "artist": "Oasis",
+      "album": "Time Flies... 1994-2009",
+      "length": "7:29",
+      "genre": "Alternative",
+      "loved": false,
+      "plays": 32,
+      "added": "2017-08-05",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Paradis (Reprise)",
+      "artist": "Paradis",
+      "album": "Recto Verso",
+      "length": "6:24",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 32,
+      "added": "2019-10-31",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Sherpa",
+      "artist": "Peter Murphy",
+      "album": "Silver Shade",
+      "length": "3:32",
+      "genre": "Alternative",
+      "loved": false,
+      "plays": 32,
+      "added": "2025-11-14",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Collie Man",
+      "artist": "Slightly Stoopid",
+      "album": "Everything You Need",
+      "length": "2:13",
+      "genre": "Rock",
+      "loved": true,
+      "plays": 32,
+      "added": "2019-09-20",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "The Gold Bug",
+      "artist": "The Alan Parsons Project",
+      "album": "The Turn of a Friendly Card",
+      "length": "4:34",
+      "genre": "Rock",
+      "loved": true,
+      "plays": 32,
+      "added": "2025-10-14",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Black Water",
+      "artist": "The Doobie Brothers",
+      "album": "The Very Best of the Doobie Brothers",
+      "length": "4:15",
+      "genre": "Rock",
+      "loved": false,
+      "plays": 32,
+      "added": "2012-09-21",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Your Prime",
+      "artist": "Anderson .Paak",
+      "album": "Malibu",
+      "length": "3:57",
+      "genre": "R&B/Soul",
+      "loved": false,
+      "plays": 31,
+      "added": "2018-10-17",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Mieux Que Tout",
+      "artist": "Paradis",
+      "album": "Recto Verso",
+      "length": "4:22",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 31,
+      "added": "2019-10-31",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Finally Moving",
+      "artist": "Pretty Lights",
+      "album": "Taking Up Your Precious Time",
+      "length": "4:38",
+      "genre": "Electronic",
+      "loved": true,
+      "plays": 31,
+      "added": "2012-01-25",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "All for You",
+      "artist": "Stick Figure",
+      "album": "World on Fire",
+      "length": "4:26",
+      "genre": "Reggae",
+      "loved": true,
+      "plays": 31,
+      "added": "2019-09-26",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Jumper",
+      "artist": "Third Eye Blind",
+      "album": "A Collection (Remastered)",
+      "length": "4:33",
+      "genre": "Alternative",
+      "loved": false,
+      "plays": 31,
+      "added": "2010-10-12",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "In All the Wrong Places",
+      "artist": "Ulrich Schnauss",
+      "album": "A Strangely Isolated Place",
+      "length": "7:04",
+      "genre": "Electronic",
+      "loved": false,
+      "plays": 31,
+      "added": "2017-11-03",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Sound & Color",
+      "artist": "Alabama Shakes",
+      "album": "Sound & Color",
+      "length": "3:02",
+      "genre": "R&B/Soul",
+      "loved": false,
+      "plays": 30,
+      "added": "2016-07-19",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Shuffle",
+      "artist": "Bombay Bicycle Club",
+      "album": "A Different Kind of Fix",
+      "length": "3:55",
+      "genre": "Alternative",
+      "loved": true,
+      "plays": 30,
+      "added": "2019-09-01",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "My Songs Know What You Did in the Dark (Light Em Up)",
+      "artist": "Fall Out Boy",
+      "album": "Save Rock and Roll",
+      "length": "3:07",
+      "genre": "Alternative",
+      "loved": false,
+      "plays": 30,
+      "added": "2014-07-28",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Main Title Theme",
+      "artist": "Jeff Beal",
+      "album": "House of Cards (Music From the Netflix Original Series)",
+      "length": "1:50",
+      "genre": "Soundtrack",
+      "loved": false,
+      "plays": 30,
+      "added": "2014-05-16",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Me, Myself & I",
+      "artist": "Jive Jones",
+      "album": "Now That's What I Call Music! Vol. 8",
+      "length": "3:28",
+      "genre": "Pop",
+      "loved": true,
+      "plays": 30,
+      "added": "2014-02-03",
+      "captured": "2026-11-16"
+    },
+    {
+      "title": "Silence and I",
+      "artist": "The Alan Parsons Project",
+      "album": "Eye In the Sky",
+      "length": "7:24",
+      "genre": "Rock",
+      "loved": false,
+      "plays": 30,
+      "added": "2025-10-13",
       "captured": "2026-11-16"
     }
   ]
