@@ -4,5 +4,6 @@ Build output for [albums.siena.codes](https://albums.siena.codes): my album coll
 
 - `albums.json`: `generated`, `counts`, and `albums`, one entry per copy owned with a `cover` path or null.
 - `plays.json`: `captured`, `counts`, and `tracks`, my most played songs from Apple Music by play count; owned or not, these are listens, not the shelf.
+- `playlists.json`: hand-curated playlists over those songs, each with its tracks sorted by plays; Absolute Favorites is one of them.
 - `covers/<id>.jpg`: 300px cover per entry.
 - `index.html`: the grid.
