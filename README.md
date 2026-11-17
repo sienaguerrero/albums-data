@@ -7,3 +7,4 @@ Build output for [albums.siena.codes](https://albums.siena.codes): my album coll
 - `playlists.json`: hand-curated playlists over those songs, each with its tracks sorted by plays; Absolute Favorites is one of them.
 - `covers/<id>.jpg`: 300px cover per entry.
 - `index.html`: the grid.
+- `playlists.html`: the playlists, one list at a time.

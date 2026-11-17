@@ -101,6 +101,7 @@
   .search input { flex: 1; min-width: 200px; max-width: 520px; font: 13px Verdana, Tahoma, sans-serif; padding: 5px 8px; border: 2px inset var(--silver-lo); background: #fff; }
   .search button { font: bold 12px Tahoma, Verdana, sans-serif; padding: 5px 12px; color: var(--deep); cursor: pointer; background: linear-gradient(180deg, #ffffff 0%, var(--silver) 100%); border: 2px solid; border-color: var(--silver-hi) var(--silver-lo) var(--silver-lo) var(--silver-hi); outline: 1px solid var(--edge); }
   .search .hits { color: var(--silver-lo); }
+  .search .jump { margin-left: auto; font: bold 12px Tahoma, Verdana, sans-serif; color: var(--deep); }
   .empty { display: none; margin: 30px auto; padding: 14px 18px; text-align: center; color: var(--deep); font-style: italic; }
   .empty.on { display: block; }
   .ticker {
@@ -163,6 +164,7 @@
       <input id="q" type="search" placeholder="try an artist, a title, or a track" autocomplete="off">
       <button type="button" id="clear">Clear</button>
       <span class="hits" id="hits"></span>
+      <a class="jump" href="playlists.html">playlists &raquo;</a>
     </form>
     <div class="deck" id="deck" title="Click for another">
       <div class="platter"><div class="rec" id="deck-rec"><span class="shine"></span></div><div class="cdisc" id="deck-cd" hidden></div><div class="arm"></div></div>
